@@ -1,11 +1,16 @@
-# Учебный шаблон проекта Portfolio
+# Учебный проект Portfolio
+```sh
+Студент: Егоров Дмитрий.
+Название курса: Продвинутый курс по веб-разработке.
+Дата: с 04.06.2018 по 20.07.2018.
+```
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone git@github.com:loftschool/advanced-boilerplate.git
-$ cd advanced-boilerplate
+$ git clone https://github.com/egorov-by-egorov/my_Portfolio.git
+$ cd my_Portfolio
 $ npm install
 ```
 
