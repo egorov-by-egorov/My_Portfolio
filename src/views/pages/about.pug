@@ -7,4 +7,15 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+  .right__color__side
+  section.welcome
+    .socials
+      include ../common/block__socials.pug
+    a(href="#").humburger-link.welcome__menu
+      +icon('hamburger', "humburger-img")
+    .welcome__title
+      +icon('portfolio_header', 'section-title__pic')
+      include ../common/block__welcome-user.pug
+    a(href="#").down-arrow.welcome__down-arrow
+        +icon('arrow_down', "down-arrow__img")
+  section.about-me
