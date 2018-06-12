@@ -1,8 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  // border: 1px solid #ff0000;
+  box-sizing: border-box; // border: 1px solid #ff0000;
 }
 
 body,
@@ -14,6 +13,7 @@ html {
 
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.42;
   color: $text-color;
@@ -44,6 +44,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: $text-color;
 }
 
 p {
@@ -71,7 +72,3 @@ p {
   position: relative;
 }
 
-.container {
-  margin: 0 auto;
-  width: 95%;
-}
