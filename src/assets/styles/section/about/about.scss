@@ -5,6 +5,12 @@
     height: 80px;
   }
 }
+.user-welcome {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%)
+}
 
 .left__color__side {
   position: absolute;
@@ -328,6 +334,7 @@
 .footer__row {
   width: 100%;
   display: flex;
+  border-bottom: 2px solid #ffffff47;
 }
 
 .footer__col {

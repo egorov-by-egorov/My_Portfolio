@@ -1,7 +1,7 @@
 extends ../auth.layout.pug
 
 block content
-  section.hero.hero-welcome
+  section.hero-welcome
       -
         var socials = [
           ['vk', 'http://vk.com'],
@@ -12,14 +12,14 @@ block content
         each item in socials
           li.socials__item.socials__item-welcome
             a(href=`${item[1]}`).socials__link
-              +icon(item[0], 'socials__link-icon')
+              +icon(item[0], 'socials__link-icon__welcome')
       a(href='#').auth__btn Авторизоваться
       .hero__bg-block
         .link__buttons
           a(href="works.html").link__button Мои работы
           a(href="about.html").link__button Обо мне
           a(href="blog.html").link__button Блог
-      .hero__user.user
+      .user-welcome
         .user__pic
         .user__description.user__description-welcome
           block desc-change
