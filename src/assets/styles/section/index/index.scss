@@ -7,7 +7,10 @@
 }
 
 .socials__item-welcome {
-  margin-right: 10px;
+  margin-right: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .socials__link-icon__welcome {
@@ -31,10 +34,9 @@
 }
 
 .hero__bg-block {
-  background-color: #fcfcfc;
+  background-color: #fcfcfc9f;
   display: flex;
   height: 395px;
-  opacity: .8;
   width: 380px;
   position: absolute;
   top: 48%;
