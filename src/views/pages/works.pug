@@ -1,34 +1,16 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Welcome'
-  -
-    var socials = [
-      ['vk', 'http://vk.com/egorovfam'],
-      ['github', 'http://github.com/egorov-by-egorov'],
-      ['in', 'http://in.com']
-    ]
+  - var title = 'My Works'
   script(src='about.bundle.js')
-
-block content
-  section.hero.hero_works
-    .block__socials
-      ul.socials
-        each item in socials
-          li.social__item
-            a(href="#").social__link
-              +icon(item, 'socials__link-icon')
-    a(href="#").humburger-link.hero__menu
-      +icon('hamburger', "humburger-img")
-    .hero__title
-      +icon('portfolio_header', 'section-title__pic')
-      .user.hero__user
-        .user__pic
-          //- img(src="./assets/images/img/avatar/avatar1.png", alt="Avatar").user__pic-img
-        .user__description
-          .user__name Егоров Дмитрий
-          .user__info Личный сайт разработчика
-    a(href="#").down-arrow.hero__down-arrow
-      +icon('arrow_down', "down-arrow__img")
-  .section-works__title
-    h2.section-works__title-text Мои работы
+block maincontent
+  .maincontent
+    block hero_bg-color
+      .side__color-beige
+      block hero_section
+        include ../common/hero-section.pug
+        +hero-section('hero_works', 'Егоров Дмитрий', 'Личный сайт разработчика', 'works_header')
+    block content
+      
+      section.works
+        .works__left
