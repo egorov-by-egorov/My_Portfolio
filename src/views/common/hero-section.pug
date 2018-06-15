@@ -1,4 +1,4 @@
-mixin hero-section(section, name, desc, iconBg, modName)
+mixin hero-section(section, name, desc, iconBg, modName, arrow)
   -
     var socials = [
       ['vk', 'http://vk.com/egorovfam'],
@@ -22,5 +22,5 @@ mixin hero-section(section, name, desc, iconBg, modName)
         .user__description
           div(class=`${modName}`).user__name=(`${name}`)
           .user__info=(`${desc}`)
-    a(href="#").down-arrow.hero__down-arrow
+    div(class=`${arrow}`).down-arrow.hero__down-arrow
       +icon('arrow_down', "down-arrow__img")

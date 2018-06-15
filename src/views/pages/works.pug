@@ -7,10 +7,13 @@ block maincontent
   .maincontent
     block hero_bg-color
       .side__color-beige
-      block hero_section
-        include ../common/hero-section.pug
-        +hero-section('hero_works', 'Егоров Дмитрий', 'Личный сайт разработчика', 'works_header')
+    block hero_section
+      include ../common/hero-section.pug
+      +hero-section('hero_works', 'Егоров Дмитрий', 'Личный сайт разработчика', 'portfolio_header')
     block content
-      
+      .works__title
+        +icon('works_header', 'works_header-title')
+        .works__title-text мои работы
       section.works
         .works__left
+        .works__right

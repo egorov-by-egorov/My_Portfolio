@@ -27,24 +27,17 @@
   }
 }
 
-.social_item_footer {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+.socials_link-icon_footer {
+  background-color: #fff;
   border: 1px solid #fff;
   border-radius: 50%;
-  text-align: center;
+  fill: #555b5ef0;
+  height: 35px;
+  transition: .3s ease;
+  width: 35px;
   &:hover {
-    background-color: #fff;
-  }
-}
-
-.socials_link-icon_footer {
-  width: 25px;
-  height: 38px;
-  &:hover {
-    width: 28px;
-    fill: #000;
+    background-color: #555b5ef0;
+    border: 1px solid #555b5ef0;
+    fill: #fff;
   }
 }
