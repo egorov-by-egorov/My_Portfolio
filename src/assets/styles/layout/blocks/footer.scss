@@ -1,11 +1,14 @@
 .footer {
-  background-color: #555b5ef0;
+  background-color: #455a64f5;
+  width: 100%;
+  height: 137px;
   margin-top: -137px;
+  position: absolute;
 }
 
 .footer-menu__item {
   display: inline-block;
-  margin: 20px 17px;
+  margin: 15px 17px;
 }
 
 .footer-menu__link {
@@ -29,18 +32,21 @@
   width: 100%;
   display: flex;
   border-bottom: 2px solid #ffffff47;
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .footer__col {
   width: 50%;
+  font-size: 14px;
 }
 
 .footer__col_justify_end {
+  padding: 15px;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  position: relative;
+  align-items: center;
   font-weight: 300;
   color: #fff;
-  padding: 15px;
 }

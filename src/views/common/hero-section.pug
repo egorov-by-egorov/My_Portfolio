@@ -22,5 +22,5 @@ mixin hero-section(section, name, desc, iconBg, modName, arrow)
         .user__description
           div(class=`${modName}`).user__name=(`${name}`)
           .user__info=(`${desc}`)
-    div(class=`${arrow}`).down-arrow.hero__down-arrow
+    a(class=`${arrow}`, href="#").down-arrow.hero__down-arrow
       +icon('arrow_down', "down-arrow__img")
