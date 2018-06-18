@@ -295,6 +295,8 @@
 }
 
 .form {
+  background-image: url('assets/images/img/bg/blur__form.jpg');
+  background-position: 100% 180%;
   padding: 10px 20px 0 20px;
   width: 380px;
   height: 390px;
@@ -303,11 +305,6 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 5px;
-}
-
-.example {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
 }
 
 .form__title {
@@ -366,7 +363,7 @@
 
 .form__button {
   width: 50%;
-  background: #00bea459;
+  background: #027263c9;
   border-right: 2px solid #fff;
   color: #fff;
   transition: 0.3s;
