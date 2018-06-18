@@ -69,6 +69,7 @@
   ],
   "dependencies": {
     "normalize.css": "^7.0.0",
+    "npm": "^6.1.0",
     "promptly": "^3.0.3",
     "pug": "^2.0.3",
     "request": "^2.87.0",
