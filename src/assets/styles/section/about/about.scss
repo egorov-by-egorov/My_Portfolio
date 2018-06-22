@@ -1,31 +1,52 @@
-.left__color__side {
+.left__color-side {
   position: absolute;
-  height: 610px;
+  height: 100vh;
   width: 50%;
   background-color: #efeee9;
 }
 
-.right__color__side {
+.right__color-side {
   position: absolute;
-  height: 610px;
+  height: 100vh;
   width: 50%;
   left: 50%;
   background-color: beige;
+  @include tablets {
+    background-color: #efeee9;
+  }
 }
 
 .about {
   width: 100%;
   display: flex;
-  &__left-side {
-    background-color: #efeee9;
+  &__description {
     width: 50%;
-    text-align: center;
     position: relative;
+    @include tablets {
+      width: 100%;
+    }
   }
-  &__right-side {
+  &__experience {
     width: 50%;
-    background-color: beige;
     padding: 15px;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.description {
+  background-color: #efeee9;
+  text-align: center;
+}
+
+.description__container {
+  @include tablets {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -37,7 +58,7 @@
   width: 100%;
 }
 
-.about__left-side__title {
+.description__title {
   font-size: 63px;
   font-family: 'BernierRegular', sans-serif;
   &::before {
@@ -56,23 +77,23 @@
   }
 }
 
-.about__left-side__description {
+.description__info {
   width: 100%;
   padding: 20px;
 }
 
-.about__left-side__description__avatar {
+.description__avatar {
   height: 391px;
   width: 100%;
 }
 
-.about__left-side__description__avatar-img {
+.description__avatar-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.about__left-side__description__subtitle {
+.description__subtitle {
   text-transform: uppercase;
   font-family: 'BernierRegular', sans-serif;
   font-size: 35px;
@@ -92,11 +113,26 @@
   }
 }
 
-.about__left-side__description__text {
+.description__text {
   text-align: left;
 }
 
-.about__right-side__title {
+.description__text-list {
+  list-style: disc;
+}
+
+.experience {
+  background-color: beige;
+}
+
+.experience__container {
+  @include tablets {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.experience__title {
   display: flex;
   justify-content: center;
   width: 70%;
@@ -120,13 +156,23 @@
   }
 }
 
-.about__right-side__description__text {
+.experience__text {
   margin: 25px 0;
+}
+
+.experience__content {
+  text-align: left;
 }
 
 .skill-list {
   &__item {
     display: inline-block;
+    @include tablets {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -152,6 +198,12 @@
   width: 110px;
   height: 110px;
   margin: 18px;
+  @include tablets {
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    word-wrap: break-word;
+  }
 }
 
 .skill__figure {
@@ -187,17 +239,26 @@
 }
 
 .map {
-  height: 670px;
+  height: 100vh;
   background-image: url('./assets/images/img/bg/map-pseudo.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  @include tablets {
+   padding-bottom: 100px;
+    
+  }
 }
 
 .contacts {
-  @include absolute;
   width: 380px;
+  max-width: 380px;
   height: 290px;
+  max-height: 290px;
   border-radius: 7px;
   background-color: #fcfcfce6;
   text-align: center;
@@ -233,6 +294,7 @@
   }
   &__icon-pic {
     width: 19px;
+    height: 19px;
     margin: 0 15px;
     fill: #00bea4;
   }
@@ -242,4 +304,17 @@
       font-style: normal;
     }
   }
+}
+
+.link-aboutme {
+  font-weight: 600;
+  text-decoration: underline;
+  transition: .3s;
+  &:hover {
+    color: #00bea4;
+  }
+}
+
+q {
+  font-style: italic;
 }

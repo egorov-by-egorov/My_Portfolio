@@ -1,16 +1,4 @@
-.hero_blog {
-  width: 100%;
-  height: 400px;
-  margin-bottom: 60px;
-  background-image: url('./assets/images/img/bg/welcome_bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
-  clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
-  position: relative;
-}
-
-.user_blog {
+.hero__name--blog {
   font-family: 'BernierRegular', sans-serif;
   font-size: 63px;
   font-weight: 400;
@@ -29,10 +17,10 @@
     margin-left: 15px;
   }
 }
-.arrow-off {
-  display: none;
-}
 
+// .arrow-off {
+//   display: none;
+// }
 .blog {
   display: flex;
   justify-content: space-between;
@@ -40,38 +28,53 @@
   width: 100%;
   &__sidebar {
     width: 30%;
-    padding-top: 10px;
+    @include tablets {
+      display: none;
+    }
   }
-  &__container {
+  &__articles {
     width: 60%;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  @include tablets {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
-.blog__sidebar__list {
+.sidebar {
+  padding-top: 10px;
+}
+
+.sidebar__list {
   text-align: right;
 }
 
-.blog__sidebar__item {
-  height: 50px;
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 0 10px;
-  &_active {
+.sidebar__item {
+  padding: 20px 15px;
+  &_is-active {
     color: #00bfa5;
     border-right: 3px solid #00bfa5;
   }
 }
 
-.blog__sidebar__link {
-  width: 100%;
-  height: 100%;
+.sidebar__link {
   &:hover {
     cursor: pointer;
     color: #00bfa5;
   }
 }
 
-.blog__container__item {
+.articles {
+  padding-bottom: 187px;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.articles__item {
   margin-top: 20px;
   margin-bottom: 20px;
   border-bottom: 2px solid rgba(128, 128, 128, 0.509);
@@ -79,22 +82,26 @@
   &:last-child {
     border: none;
   }
-  &__title {
-    font-family: 'BernierRegular';
-    font-size: 35px;
-  }
-  &__date {
-    font-size: 11px;
-    margin: 10px 0;
-  }
-  &__contain {
-    font-size: 16px;
-    margin-bottom: 20px;
+  @include tablets {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
-.hero-blog {
-  height: 400px;
+.articles__title {
+  font-family: 'BernierRegular';
+  font-size: 35px;
+}
+
+.articles__date {
+  color: #00bfa5;
+  font-size: 11px;
+  margin: 10px 0;
+}
+
+.articles__contain {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .desc-blog {

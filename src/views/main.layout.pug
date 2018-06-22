@@ -17,11 +17,10 @@ html(lang="ru-RU")
     link(rel="stylesheet", href="main.min.css")
   body
     .wrapper
-      block maincontent
-        block hero_bg-color
-        block hero_section
-        block content
-      include ./common/footer.pug
+      block hero-bg__color
+      block hero-section
+      block content
+    include ./common/footer.pug
 
   script(src='bootloader.bundle.js')
   script(src='vendor.bundle.js')

@@ -1,26 +1,19 @@
-mixin hero-section(section, name, desc, iconBg, modName, arrow)
+mixin hero-section(name, desc, iconBg, modName, arrow)
   -
     var socials = [
       ['vk', 'http://vk.com/egorovfam'],
       ['github', 'http://github.com/egorov-by-egorov'],
       ['in', 'http://in.com']
     ]
-  section(class=`${section}`)
-    .socials
-      ul.socials__list
-        each item in socials
-          li.social__item
-            a(href=item[1]).social__link
-              +icon(item[0], "socials__link-icon")
-    a(href="#").humburger-link.menu
-      +icon('hamburger', "humburger-img")
+  section.hero
+    include ./header
     .hero__title
-      +icon((`${iconBg}`), 'section-title__pic')
+      +icon((`${iconBg}`), 'hero__title-pic')
       .hero__user
-        .user__pic
+        .hero__avatar
           //- img(src="./assets/images/img/avatar/avatar1.png", alt="Avatar").user__pic-img
-        .user__description
-          div(class=`${modName}`).user__name=(`${name}`)
-          .user__info=(`${desc}`)
+        .hero__description
+          div(class=`${modName}`).hero__name=(`${name}`)
+          .hero__info=(`${desc}`)
     a(class=`${arrow}`, href="#").down-arrow.hero__down-arrow
       +icon('arrow_down', "down-arrow__img")

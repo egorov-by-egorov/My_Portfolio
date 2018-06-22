@@ -1,0 +1,9 @@
+header.header
+  .socials
+    ul.socials__list
+      each item in socials
+        li.social__item
+          a(href=item[1]).social__link
+            +icon(item[0], "socials__link-icon")
+  a(href="#").humburger-link
+    +icon('hamburger', "humburger-link__img")
