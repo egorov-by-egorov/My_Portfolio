@@ -1,34 +1,74 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Welcome'
-  -
-    var socials = [
-      ['vk', 'http://vk.com/egorovfam'],
-      ['github', 'http://github.com/egorov-by-egorov'],
-      ['in', 'http://in.com']
-    ]
+  - var title = 'My Works'
   script(src='about.bundle.js')
+block maincontent
+  .maincontent
+    block hero_bg-color
+      .side__color-beige
+    block hero_section
+      include ../common/hero-section.pug
+      +hero-section('hero_works', 'Егоров Дмитрий', 'Личный сайт разработчика', 'portfolio_header')
+    block content
+      .works__title
+        +icon('works_header', 'works_header-title')
+        h2.works__title-text мои работы
+      section.works
+        .works__description-side
+          .works__description-side__container
+            h3.works__description-side__title 
+              p сайт школы онлайн образования
+            .works__description-side__technology html, css, javascript
+            button.works__description-side__button Посмотреть сайт
+              +icon('link', 'works__description-side__button__icon')
+        .works__slider-side
+          .slider
+            .slider__middle-window
+              .slider__middle-window__img
+                +image('middle_img.png', 'image', 'slider_windows_general-img')
 
-block content
-  section.hero.hero_works
-    .block__socials
-      ul.socials
-        each item in socials
-          li.social__item
-            a(href="#").social__link
-              +icon(item, 'socials__link-icon')
-    a(href="#").humburger-link.hero__menu
-      +icon('hamburger', "humburger-img")
-    .hero__title
-      +icon('portfolio_header', 'section-title__pic')
-      .user.hero__user
-        .user__pic
-          //- img(src="./assets/images/img/avatar/avatar1.png", alt="Avatar").user__pic-img
-        .user__description
-          .user__name Егоров Дмитрий
-          .user__info Личный сайт разработчика
-    a(href="#").down-arrow.hero__down-arrow
-      +icon('arrow_down', "down-arrow__img")
-  .section-works__title
-    h2.section-works__title-text Мои работы
+            .slider__first-window.slider_windows_general
+              +icon('portf_arrow_down', 'slider__first-window__img-arrow')
+              .slider__first-window__img
+                +image('first_img.jpg', 'image', 'slider_windows_general-img')
+
+            .slider__thirth-window.slider_windows_general
+              +icon('portf_arrow_up', 'slider__first-window__img-arrow')
+              .slider__thirth-window__img
+                +image('thirth_img.jpg', 'image', 'slider_windows_general-img')
+      .works__review-title
+        +icon('about_header', 'works_header-title')
+        .works__subtitle-text что обо мне говорят
+      section.review
+        .review-teachers
+          ul.review-teachers__list
+            li.review-teachers__item
+              .review-teachers__item-breadcrumbs “
+              .review-teachers__item-comment Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+              .review-teachers__item-teachers
+                .review-teachers__item-teachers__img-kov
+                .review-teachers__item-teachers__description
+                  .review-teachers__item-teachers__name Ковальчук Дмитрий
+                  .review-teachers__item-teachers__desc основатель Loftschool
+            li.review-teachers__item
+              .review-teachers__item-breadcrumbs “
+              .review-teachers__item-comment Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+              .review-teachers__item-teachers
+                .review-teachers__item-teachers__img-sab
+                .review-teachers__item-teachers__description
+                  .review-teachers__item-teachers__name Сабанцев Владимир
+                  .review-teachers__item-teachers__desc преподаватель
+        form.form
+          .form__title
+            .form__title-text связаться со мной
+          .form__inputs
+            input(type="text", name="name", placeholder="Имя").form__input
+            input(type="email", name="email", placeholder="Email").form__input
+          textarea(name="textarea", cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
+          .form__buttons
+            button(type="submit").form__button Отправить
+            button(type="reset").form__button Очистить
+        a(href="#").review__arrow
+          +icon('portf_arrow_up', "review__arrow__img")
+
