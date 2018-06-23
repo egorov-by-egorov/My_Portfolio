@@ -1,13 +1,15 @@
 .footer {
-  background-color: #455a64f5;
+  background-color: rgba(55, 62, 66, .85);
   width: 100%;
-  margin-top: -136px;
+  height: 125px;
+  margin-top: -125px;
   position: absolute;
   color: #fff;
-  padding: 15px;
+  padding: 15px 15px 0 15px;
   font-weight: 300;
   @include tablets {
-    margin-top: -187px;
+    height: 210px;
+    margin-top: -210px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +48,7 @@
 
 .footer__text {
   font-weight: 300;
-  max-width: 45%;
+  max-width: 50%;
   @include tablets {
     max-width: 95%;
     margin-bottom: 15px;
@@ -59,7 +61,6 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #ffffff47;
-  padding: 5px;
   &:last-child {
     border-bottom: none;
   }

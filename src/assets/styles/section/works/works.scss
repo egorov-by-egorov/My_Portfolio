@@ -189,11 +189,20 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   background-image: url('assets/images/img/bg/works_bg_form.jpg');
   background-position: center;
   background-size: cover;
-  padding-bottom: 320px;
+  background-repeat: no-repeat;
+  &::after {
+    display: block;
+    content: '';
+    height: 125px;
+    width: 100%;
+    @include tablets {
+      height: 210px;
+    }
+  }
 }
 
 .about-me__reviews {
@@ -260,8 +269,8 @@
 }
 
 .about-me__form {
-  background-image: url('assets/images/img/bg/blur__form.jpg');
-  background-position: 100% 175%;
+  background-color: rgba(55, 62, 66, .1);
+  box-shadow: -5px -10px 20px 10px rgba(55, 62, 66, .60);
   padding: 10px 20px 0 20px;
   width: 380px;
   max-width: 380px;
@@ -272,6 +281,7 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 5px;
+  margin-bottom: 50px;
 }
 
 .form {
@@ -333,6 +343,10 @@
   display: flex;
 }
 
+* {
+  // border: 1px solid #000;
+}
+
 .form__button {
   height: 50px;
   width: 50%;
@@ -355,10 +369,11 @@
 }
 
 .about-me__arrow {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 17%;
+  display: block;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .about-me__arrow-img {
