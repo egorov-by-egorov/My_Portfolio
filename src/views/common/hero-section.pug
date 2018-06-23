@@ -13,7 +13,7 @@ mixin hero-section(name, desc, iconBg, modName, arrow)
         .hero__avatar
           //- img(src="./assets/images/img/avatar/avatar1.png", alt="Avatar").user__pic-img
         .hero__description
-          div(class=`${modName}`).hero__name=(`${name}`)
+          h1(class=`${modName}`).hero__name=(`${name}`)
           .hero__info=(`${desc}`)
     a(class=`${arrow}`, href="#").down-arrow.hero__down-arrow
       +icon('arrow_down', "down-arrow__img")

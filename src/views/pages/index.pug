@@ -16,7 +16,7 @@ block content
       ul.socials__list
         each item in socials
           li.auth__socials-item
-            a(href=`${item[1]}`).socials__link
+            a(href=`${item[1]}` target="blank").socials__link
               +icon(item[0], 'auth__socials-icon')
       nav.auth__buttons
         ul.auth__list

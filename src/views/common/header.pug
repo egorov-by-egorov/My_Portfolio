@@ -1,9 +1,9 @@
-header.header
-  .socials
+header.hero__header
+  .socials.hero__socials
     ul.socials__list
       each item in socials
-        li.social__item
-          a(href=item[1]).social__link
+        li.socials__item
+          a(href=item[1] target="blank").socials__link
             +icon(item[0], "socials__link-icon")
-  a(href="#").humburger-link
-    +icon('hamburger', "humburger-link__img")
+  a(href="#").hero__menu
+    +icon('hamburger', "hero__menu-icon")

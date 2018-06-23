@@ -144,7 +144,7 @@
   width: 100%;
 }
 
-// Title of section "what's saying about me"
+// section --about-me--
 .about-me__title {
   background-color: #fff;
   display: flex;
@@ -183,7 +183,6 @@
   height: auto;
 }
 
-// section --Review--
 .about-me {
   position: relative;
   display: flex;
@@ -359,7 +358,7 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  bottom: 20%;
+  bottom: 17%;
 }
 
 .about-me__arrow-img {
