@@ -51,6 +51,15 @@ p {
   margin: 0;
   padding: 0;
 }
+small {
+  font-size: 15px;
+}
+blockquote {
+  margin: 0;
+}
+address {
+  font-style: normal;
+}
 
 // instead of display: none;
 .visuallyhidden {

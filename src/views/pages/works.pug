@@ -12,7 +12,7 @@ block content
   section.works
     .works__header
       +icon('works_header', 'works__header--bg')
-      h2.works__title мои работы
+      h1.works__title мои работы
     .slider
       .slider__desc
         h3.slider__title сайт школы онлайн образования
@@ -26,36 +26,37 @@ block content
           +image('first_img.jpg', 'image', 'slider__main-img')
         buttons.slider__button
           +image('thirth_img.jpg', 'image', 'slider__main-img')
-  .works__review-title
+  .about-me__title
     +icon('about_header', 'works__header--bg')
-    h2.works__subtitle-text что обо мне говорят
+    h2.about-me__subtitle что обо мне говорят
   section.about-me
     .about-me__reviews
       .review.about__review
-        .review__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        blockquote.review__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
         .review__author
           .review__author-img.review__author-img--pic-kov
           .review__author-info
             .review__author-name Ковальчук Дмитрий
             .review__author-position основатель Loftschool
       .review.about__review
-        .review__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        blockquote.review__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
         .review__author
           .review__author-img.review__author-img--pic-sab
           .review__author-info
             .review__author-name Сабанцев Владимир
             .review__author-position преподаватель
-    form.form.about__form(action="#")
+    .about-me__form
       .form__title связаться со мной
-      label(for="name").visuallyhidden Введите имя
-      input#name(type="text", name="name", placeholder="Введите имя").form__input
-      label(for="email").visuallyhidden Введите email
-      input#email(type="email", name="email", placeholder="Введите email").form__input
-      label(for="textarea").visuallyhidden Введите сообщение
-      textarea#textarea(name="textarea", cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
+      form.form(action="#")
+        label(for="name").visuallyhidden Введите имя
+        input#name(type="text", name="name", placeholder="Введите имя").form__input
+        label(for="email").visuallyhidden Введите email
+        input#email(type="email", name="email", placeholder="Введите email").form__input
+        label(for="textarea").visuallyhidden Введите сообщение
+        textarea#textarea(name="textarea", cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
       .form__buttons
         button.form__button(type="submit") Отправить
         button.form__button(type="reset") Очистить
-    a(href="#").review__arrow
-      +icon('portf_arrow_up', "review__arrow__img")
+      a(href="#").about-me__arrow
+        +icon('portf_arrow_up', "about-me__arrow-img")
 

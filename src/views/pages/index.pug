@@ -1,7 +1,7 @@
 extends ../auth.layout.pug
 block content
   section.auth
-    button.auth__btn Авторизоваться
+    button.auth__btn(type='button') Авторизоваться
     .auth__user-card
       .auth__avatar
       .auth__desc
@@ -18,10 +18,13 @@ block content
           li.auth__socials-item
             a(href=`${item[1]}`).socials__link
               +icon(item[0], 'auth__socials-icon')
-      .auth__buttons
-        a(href="works.html").auth__link Мои работы
-        a(href="about.html").auth__link Обо мне
-        a(href="blog.html").auth__link Блог
-
+      nav.auth__buttons
+        ul.auth__list
+          li.auth__item
+            a(href="works.html").auth__link Мои работы
+          li.auth__item
+            a(href="about.html").auth__link Обо мне
+          li.auth__item
+            a(href="blog.html").auth__link Блог
     footer.copyright-welcome
       small © Егоров Дмитрий | создано с любовью в LoftSchool | 2018

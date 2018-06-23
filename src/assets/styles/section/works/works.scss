@@ -145,7 +145,7 @@
 }
 
 // Title of section "what's saying about me"
-.works__review-title {
+.about-me__title {
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -175,7 +175,7 @@
   }
 }
 
-.works__subtitle-text {
+.about-me__subtitle {
   overflow: hidden;
   width: 35%;
   font-size: 63px;
@@ -260,7 +260,7 @@
   font-weight: 600;
 }
 
-.form {
+.about-me__form {
   background-image: url('assets/images/img/bg/blur__form.jpg');
   background-position: 100% 175%;
   padding: 10px 20px 0 20px;
@@ -273,6 +273,10 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 5px;
+}
+
+.form {
+  width: 95%;
 }
 
 .form__title {
@@ -351,14 +355,14 @@
   }
 }
 
-.review__arrow {
+.about-me__arrow {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   bottom: 20%;
 }
 
-.review__arrow__img {
+.about-me__arrow-img {
   fill: #fff;
   width: 26px;
   height: 26px;

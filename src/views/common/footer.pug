@@ -14,20 +14,19 @@
 footer.footer
   .footer__row
     .footer__col
-      nav.footer-menu
-        ul.footer-menu__list
+      nav.footer__nav
+        ul.footer__list
           each item in footerMenu
-            li.footer-menu__item
-              a(href=item[1]).footer-menu__link #{item[0]}
-    .footer__col.footer__col_justify_end
+            li.footer__item
+              a(href=item[1]).footer__link #{item[0]}
+    .footer__col.footer__col--justify--end
       ul.socials__list
         each item in socials
-          li.social__item__footer
-            a(href=item[1]).social_item_footer
-              +icon(item[0], 'socials_link-icon_footer')
+          li.socials__item--footer
+            a(href=item[1]).socials__link--footer
+              +icon(item[0], 'socials__icon--footer')
   .footer__row
     .footer__col
-      .footer__text
-        p Я веб-разработчик из Москвы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-    .footer__col.footer__col_justify_end
+      .footer__text Я веб-разработчик из Москвы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+    .footer__col.footer__col--justify--end
       small &copy Егоров Дмитрий | создано с любовью в LoftSchool | 2018
