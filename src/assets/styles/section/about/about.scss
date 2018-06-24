@@ -10,7 +10,7 @@
   height: 100vh;
   width: 50%;
   left: 50%;
-  background-color: beige;
+  background-color: #eeebdf;
   @include tablets {
     background-color: #efeee9;
   }
@@ -44,9 +44,12 @@
 }
 
 .description__container {
+  width: 440px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
   @include tablets {
     width: 80%;
-    margin: 0 auto;
   }
 }
 
@@ -79,7 +82,6 @@
 
 .description__info {
   width: 100%;
-  padding: 20px;
 }
 
 .description__avatar {
@@ -123,7 +125,7 @@
 }
 
 .experience {
-  background-color: beige;
+  background-color: #eeebdf;
 }
 
 .experience__container {
@@ -196,8 +198,8 @@
 .skill {
   display: block;
   position: relative;
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   margin: 18px;
   @include tablets {
     width: 130px;
@@ -230,7 +232,9 @@
 
 .skill__title {
   position: absolute;
-  top: 41%;
+  top: 40%;
+  text-align: center;
+  width: 77px;
 }
 
 .socials__item-round {
@@ -250,8 +254,7 @@
   align-items: center;
   align-content: space-between;
   @include tablets {
-   padding-bottom: 100px;
-    
+    padding-bottom: 100px;
   }
 }
 
