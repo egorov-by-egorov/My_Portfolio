@@ -54,7 +54,7 @@ p {
 }
 small {
   font-size: 15px;
-  @include phones-small {
+  @include phones-big {
     font-size: 13px;
   }
 }

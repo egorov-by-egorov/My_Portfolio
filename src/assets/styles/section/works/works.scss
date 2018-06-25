@@ -40,7 +40,7 @@
   @include absolute;
   opacity: 0.08;
   width: 50%;
-  @include phones-small {
+  @include phones-big {
     width: 80%;
   }
 }
@@ -49,7 +49,7 @@
   font-family: 'BernierRegular', sans-serif;
   font-size: 63px;
   margin: 0 20px;
-  @include phones-small {
+  @include phones-big {
     font-size: 35px;
   }
 }
@@ -97,7 +97,7 @@
     font-size: 35px;
     opacity: .6;
   }
-  @include phones-small {
+  @include phones-big {
     font-size: 21px;
   }
 }
@@ -111,7 +111,7 @@
   border-top: 1px solid #00bea4;
   border-bottom: 1px solid #00bea4;
   margin-bottom: 25px;
-  @include phones-small {
+  @include phones-big {
     font-size: 14px;
   }
 }
@@ -185,7 +185,7 @@
     height: 100%;
     line-height: 2;
   }
-  @include phones-small {
+  @include phones-big {
     height: 120px;
   }
 }
@@ -196,7 +196,7 @@
   font-size: 63px;
   margin: 0 20px;
   height: auto;
-  @include phones-small {
+  @include phones-big {
     font-size: 35px;
     width: 50%;
   }
@@ -229,7 +229,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-  @include phones-small {
+  @include phones-big {
     flex-direction: column;
   }
 }
@@ -245,7 +245,7 @@
   @include tablets {
     width: 70%;
   }
-  @include phones-small {
+  @include phones-big {
     width: 100%;
   }
 }
@@ -253,7 +253,7 @@
 .review {
   margin-bottom: 30px;
   padding: 25px;
-  @include phones-small {
+  @include phones-big {
     padding: 10px;
     margin-bottom: 0;
     font-size: 14px;
@@ -267,11 +267,11 @@
     content: url('assets/images/img/-.png');
     height: 34px;
     width: 34px;
-    @include phones-small {
+    @include phones-big {
       margin: 0 auto;
     }
   }
-  @include phones-small {
+  @include phones-big {
     min-height: auto;
   }
 }
@@ -279,7 +279,7 @@
 .review__author {
   margin-top: 30px;
   display: flex;
-  @include phones-small {
+  @include phones-big {
     margin-top: 10px;
   }
 }
@@ -306,7 +306,7 @@
 .review__author-info {
   color: #00bea4;
   padding: 20px 20px 0 20px;
-  @include phones-small {
+  @include phones-big {
     padding: 0 20px;
     line-height: 2;
   }
@@ -330,7 +330,7 @@
   justify-content: space-between;
   border-radius: 5px;
   margin-bottom: 50px;
-  @include phones-small {
+  @include phones {
     width: 300px;
     max-width: 300px;
     height: 395px;
@@ -364,7 +364,7 @@
     opacity: .6;
     margin-left: 10px;
   }
-  @include phones-small {
+  @include phones {
     font-size: 21px;
   }
 }
@@ -398,7 +398,7 @@
   max-width: 380px;
   height: 50px;
   display: flex;
-  @include phones-small {
+  @include phones {
     width: 300px;
     max-width: 300px;
   }
