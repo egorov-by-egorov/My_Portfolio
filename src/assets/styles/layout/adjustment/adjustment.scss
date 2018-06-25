@@ -4,6 +4,9 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 15px 2%;
+  @include phones-small {
+    padding: 10px 1%;
+  }
 }
 
 // menu humburger
@@ -146,7 +149,7 @@ $hamburger-types: (spring) !default;
   left: 0;
   top: 0;
   height: 100vh;
-  z-index: 5;
+  // z-index: 5;
   &::before {
     content: '';
     display: block;
@@ -172,6 +175,7 @@ $hamburger-types: (spring) !default;
     transition: .4s;
   }
   &--active {
+    z-index: 5;
     &::before,
     &::after {
       transform: translatex(0);
@@ -215,6 +219,23 @@ $hamburger-types: (spring) !default;
       margin-left: 15px;
     }
   }
+  @include phones-small {
+    font-size: 42px;
+    &::before {
+      display: inline-block;
+      content: '-';
+      font-size: 35px;
+      opacity: .3;
+      margin-right: 15px;
+    }
+    &::after {
+      display: inline-block;
+      content: '-';
+      font-size: 35px;
+      opacity: .3;
+      margin-left: 15px;
+    }
+  }
 }
 
 .hamburger {
@@ -232,6 +253,11 @@ $hamburger-types: (spring) !default;
   width: 40px;
   height: 40px;
   margin-right: 15px;
+  z-index: 1;
+  transition: all .4s ease;
+  @include phones-small {
+    margin-right: 10px;
+  }
 }
 
 .socials__link {
@@ -241,20 +267,25 @@ $hamburger-types: (spring) !default;
 }
 
 .socials__link-icon {
-  width: 25px;
-  height: 100%;
+  width: 30px;
+  height: 30px;
   fill-opacity: 0.6;
   fill: #fff;
   transition-duration: 0.3s;
   &:hover {
     fill-opacity: 1;
-    width: 30px;
+    width: 28px;
+    height:39px;
+  }
+  @include phones-small {
+    width: 23px;
+    height: 23px;
   }
 }
 
 .socials__link-icon--footer {
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #ffffff87;
+  border: 0.85px solid #ffffff87;
   border-radius: 50%;
   fill: rgba(55, 62, 66, .85);
   height: 35px;

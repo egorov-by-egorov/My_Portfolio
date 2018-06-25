@@ -54,6 +54,9 @@ p {
 }
 small {
   font-size: 15px;
+  @include phones-small {
+    font-size: 13px;
+  }
 }
 blockquote {
   margin: 0;

@@ -48,8 +48,18 @@
   max-width: 80%;
   margin: 0 auto;
   padding-bottom: 20px;
+  @include hd {
+    min-width: 97%;
+    display: flex;
+    justify-content: space-between;
+  }
   @include tablets {
-    width: 80%;
+    width: 90%;
+    margin: 0 auto;
+  }
+  @include phones-small {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -59,6 +69,9 @@
   left: 0;
   opacity: 0.08;
   width: 100%;
+  @include hd {
+    width: 50%;
+  }
 }
 
 .description__title {
@@ -70,6 +83,9 @@
     font-size: 63px;
     opacity: .6;
     margin-right: 5px;
+    @include phones-small {
+      font-size: 35px;
+    }
   }
   &::after {
     display: inline-block;
@@ -77,11 +93,23 @@
     font-size: 63px;
     opacity: .6;
     margin-left: 5px;
+    @include phones-small {
+      font-size: 35px;
+    }
+  }
+  @include hd {
+    width: 50%;
+  }
+  @include phones-small {
+    font-size: 35px;
   }
 }
 
 .description__info {
   width: 100%;
+  @include hd {
+    width: 50%;
+  }
 }
 
 .description__avatar {
@@ -99,6 +127,7 @@
   text-transform: uppercase;
   font-family: 'BernierRegular', sans-serif;
   font-size: 35px;
+  margin-bottom: 1px;
   &::before {
     display: inline-block;
     content: '-';
@@ -117,6 +146,9 @@
 
 .description__text {
   text-align: left;
+  @include phones-small {
+    padding: 0 10px;
+  }
 }
 
 .description__text-list {
@@ -130,8 +162,12 @@
 
 .experience__container {
   @include tablets {
-    width: 80%;
+    max-width: 80%;
     margin: 0 auto;
+  }
+  @include phones-small {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -157,6 +193,10 @@
     opacity: .6;
     margin-left: 10px;
   }
+  @include phones-small {
+    font-size: 21px;
+    width: 80%;
+  }
 }
 
 .experience__text {
@@ -165,6 +205,9 @@
 
 .experience__content {
   text-align: left;
+  @include phones-small {
+    text-align: center;
+  }
 }
 
 .skills-list {
@@ -174,6 +217,10 @@
 
 .skills {
   display: flex;
+  @include phones-small {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .skills-list__item {
@@ -213,6 +260,11 @@
     height: 130px;
     text-align: center;
     word-wrap: break-word;
+  }
+  @include phones-small {
+    width: 109px;
+    height: 109px;
+    font-size: 14px;
   }
 }
 
@@ -267,6 +319,10 @@
   @include tablets {
     padding-bottom: 100px;
   }
+  @include phones-small {
+    padding-bottom: 0;
+    align-items: flex-start;
+  }
 }
 
 .contacts {
@@ -278,6 +334,13 @@
   background-color: #fcfcfce6;
   text-align: center;
   transition: 0.3s;
+  @include phones-small {
+    padding-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+    max-height: 260px;
+  }
   &__title {
     font-family: 'BernierRegular', sans-serif;
     font-style: normal;

@@ -1,9 +1,3 @@
-// @mixin circle($width, $color) {
-//   width: $width;
-//   height: $width;
-//   border-radius: $width/2;
-//   background-color: $color;
-// }
 @mixin absolute {
   position: absolute;
   top: 50%;
@@ -41,19 +35,19 @@
 }
 
 @mixin phones-big {
-  @media screen and (max-width: 414) {
+  @media screen and (max-width: 414px) {
     @content;
   }
 }
 
 @mixin phones {
-  @media screen and (max-width: 375) {
+  @media screen and (max-width: 375px) {
     @content;
   }
 }
 
 @mixin phones-small {
-  @media screen and (max-width: 320) {
+  @media screen and (max-width: 320px) {
     @content;
   }
 }

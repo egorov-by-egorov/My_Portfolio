@@ -16,6 +16,10 @@
     justify-content: center;
     align-items: center;
   }
+  @include phones-small {
+    font-size: 13px;
+  }
+  
 }
 
 .footer__nav {

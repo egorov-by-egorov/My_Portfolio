@@ -11,12 +11,19 @@
     -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
     clip-path: polygon(0% 0%, 100% 0, 100% 92%, 50% 100%, 0 92%);
   }
+  @include phones-small {
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 95%, 50% 100%, 0 95%);
+  }
 }
 
 .hero__title {
   @include absolute;
   height: 50%;
   width: 90%;
+  @include phones-small {
+    top: 45%;
+  }
 }
 
 .hero__title-pic {
@@ -24,6 +31,9 @@
   height: 100%;
   width: 100%;
   opacity: 0.08;
+  @include phones-small {
+    opacity: 0;
+  }
 }
 
 .hero__user {
@@ -46,13 +56,20 @@
 .hero__description {
   color: #fff;
   text-align: center;
+  @include phones-small {
+    font-size: 14px;
+    font-weight: 300;
+  }
 }
 
 .hero__name {
   font-size: 35px;
   font-weight: 600;
+  @include phones-small {
+    font-size: 21px;
+    font-weight: 500;
+  }
 }
-
 
 .hero__down-arrow {
   position: absolute;
@@ -72,10 +89,10 @@
 
 .down-arrow__img {
   width: 26px;
-  height: 36px;
+  height: 26px;
   transition: 0.2s;
   &:hover {
-    width: 30px;
-    height: 26px;
+    width: 32px;
+    height: 36px;
   }
 }

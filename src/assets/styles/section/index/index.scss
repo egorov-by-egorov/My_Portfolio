@@ -9,6 +9,13 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
+  @include tablets {
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+  @include phones {
+    padding: 10px 0;
+  }
 }
 
 .auth__btn {
@@ -26,6 +33,10 @@
     background-color: #fff;
     color: #00bfa5;
   }
+  @include phones-small {
+    align-self: center;
+    margin: 0;
+  }
 }
 
 .auth__user-card {
@@ -42,6 +53,14 @@
   max-width: 380px;
   padding-top: 25px;
   border-radius: 8px 8px 8px 8px;
+  @include tablets {
+    width: 350px;
+    max-width: 350px;
+  }
+  @include phones-small {
+    width: 300px;
+    height: 395px;
+  }
 }
 
 .auth__avatar {
@@ -118,4 +137,7 @@
 
 .copyright-welcome {
   color: #fff;
+  @include phones-small {
+    text-align: center;
+  }
 }
