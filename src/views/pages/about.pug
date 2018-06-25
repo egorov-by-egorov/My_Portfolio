@@ -2,7 +2,8 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'About me'
-  script(src='about.bundle.js')
+block scripts
+  script(src='./about.bundle.js')
 block hero-bg__color
   .left__color-side
   .right__color-side 
@@ -36,26 +37,6 @@ block content
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .experience__content
           #skills-container
-          -
-            var skills = [
-              ['Frontend', [['HTML5', 90], ['CSS3', 65], ['JavaScript & jQuery', 70]]],
-              ['Backend', [['PHP', 30], ['mySQL', 40], ['Node.js', 50], ['Mongo.db', 50]]],
-              ['Workflow', [['Git', 90], ['Gulp', 85], ['Webpack', 80]]]
-            ]
-          
-
-          ul.skill-list
-            each skillsrow in skills
-              li.skill-list__item.skills-row
-                .skills-row__title #{skillsrow[0]}
-                ul.skill-row__list
-                  each skill in skillsrow[1]
-                    li.skill-row__item
-                      figure.skill
-                        svg(viewbox='0 0 100 100' preserveAspectRatio='none').skill__figure
-                          circle(cx='50' cy='50' r='40').skill__circle.skill__circle_inder
-                          circle(cx='50' cy='50' r='40').skill__circle.skill__circle_above
-                      .skill__title #{skill[0]}
   section.map
     .contacts
       h2.contacts__title Контакты

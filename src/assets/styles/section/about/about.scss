@@ -167,19 +167,26 @@
   text-align: left;
 }
 
-.skill-list {
-  &__item {
-    display: inline-block;
-    @include tablets {
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-    }
+.skills-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+}
+
+.skills-list__item {
+  display: flex;
+  @include tablets {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.skills-row__title {
+.skills-list__title {
   margin-left: 18px;
   font-size: 28px;
   font-weight: 500;
@@ -232,9 +239,13 @@
 
 .skill__title {
   position: absolute;
-  top: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   width: 77px;
+  color: #00bea4;
+  font-weight: 500;
 }
 
 .socials__item-round {

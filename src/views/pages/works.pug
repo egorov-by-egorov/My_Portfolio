@@ -2,7 +2,8 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'My Works'
-
+block scripts
+  script(src='./works.bundle.js')
 block hero-bg__color
   .side__color--beige
 block hero-section
@@ -13,6 +14,7 @@ block content
     .works__header
       +icon('works_header', 'works__header--bg')
       h1.works__title мои работы
+    #slider
     .slider
       .slider__desc
         h3.slider__title сайт школы онлайн образования
