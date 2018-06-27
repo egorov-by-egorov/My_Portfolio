@@ -1,20 +1,15 @@
-.hero {
-  background-image: url('./assets/images/img/bg/welcome_bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+.hero__section {
   width: 100%;
   height: 100vh;
-  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
-  clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
-  position: relative;
-  @include tablets {
-    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
-    clip-path: polygon(0% 0%, 100% 0, 100% 92%, 50% 100%, 0 92%);
-  }
-  @include phones-big {
-    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
-    clip-path: polygon(0% 0%, 100% 0, 100% 95%, 50% 100%, 0 95%);
-  }
+  min-height: 650px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .hero__title {
@@ -22,11 +17,12 @@
   height: 50%;
   width: 90%;
   @include phones-small {
-    top: 45%;
+    height: 45%;
   }
 }
 
 .hero__title-pic {
+  position: absolute;
   fill: #fff;
   height: 100%;
   width: 100%;
@@ -37,20 +33,24 @@
 }
 
 .hero__user {
-  @include absolute;
-  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  @include phones-small {
+    position: absolute;
+    top: 35%;
+  }
 }
 
 .hero__avatar {
-  background-image: url("./assets/images/img/avatar/avatar1.png");
-  background-position: center;
-  background-size: cover;
   width: 143px;
   height: 143px;
-  position: relative;
+  margin: 0 auto;
+}
+
+.hero__avatar-img {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .hero__description {

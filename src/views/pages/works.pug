@@ -5,7 +5,10 @@ block variables
 block scripts
   script(src='./works.bundle.js')
 block hero-bg__color
-  .side__color--beige
+  .hero
+    .hero__parralax
+      .side__color--beige
+      +image('welcome_bg.jpg', 'parralax', 'hero__parralax-img')
 block hero-section
   include ../common/hero-section.pug
   +hero-section('Егоров Дмитрий', 'Личный сайт разработчика', 'portfolio_header')
@@ -15,19 +18,6 @@ block content
       +icon('works_header', 'works__header--bg')
       h1.works__title мои работы
     #slider-component
-    //- .slider
-    //-   .slider__desc
-    //-     h3.slider__title сайт школы онлайн образования
-    //-     p.slider__tech html, css, javascript
-    //-     a(href="#").slider__link Посмотреть сайт
-    //-       +icon('link', 'slider__link-icon')
-    //-   .slider__view
-    //-     +image('middle_img.png', 'image', 'slider__main-img')
-    //-   .slider__buttons
-    //-     buttons.slider__button.slider__button--bg
-    //-       +image('first_img.jpg', 'image', 'slider__main-img')
-    //-     buttons.slider__button
-    //-       +image('thirth_img.jpg', 'image', 'slider__main-img')
   section.about-me
     .about-me__title
       +icon('about_header', 'works__header--bg')

@@ -1,8 +1,17 @@
 .side__color--beige {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 135%;
   background-color: #faf8f0;
+  @include desktop {
+    height: 150%;
+  }
+  @include tablets {
+    height: 135%;
+  }
+  @include phones-small {
+    height: 150%;
+  }
 }
 
 .works {

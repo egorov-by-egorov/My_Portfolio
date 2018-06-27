@@ -5,6 +5,10 @@ block variables
 
 block scripts
   script(src='blog.bundle.js')
+block hero-bg__color
+  .hero
+    .hero__parralax
+      +image('welcome_bg.jpg', 'parralax', 'hero__parralax-img')
 block hero-section
   include ../common/hero-section.pug
   +hero-section('Блог', 'Статьи, которые я написал', 'blog_header', 'hero__name--blog', 'arrow-off')

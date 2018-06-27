@@ -1,63 +1,76 @@
 extends ../auth.layout.pug
 block content
-  section.auth
-    button.auth__btn(type='button') Авторизоваться
-    .flipper.auth__flipper
-      .flipper__user-card
-        .flipper__avatar
-        .flipper__desc
-          .flipper__name Егоров Дмитрий
-          .flipper__info Личный сайт разработчика
-        -
-          var socials = [
-            ['vk', 'http://vk.com/egorovfam'],
-            ['github', 'http://github.com/egorov-by-egorov'],
-            ['in', 'http://in.com']
-          ]
-        ul.socials__list
-          each item in socials
-            li.flipper__socials-item
-              a(href=`${item[1]}` target="blank").socials__link
-                +icon(item[0], 'flipper__socials-icon')
-        nav.flipper__buttons
-          ul.flipper__list
-            li.flipper__item
-              a(href="works.html").flipper__link Мои работы
-            li.flipper__item
-              a(href="about.html").flipper__link Обо мне
-            li.flipper__item
-              a(href="blog.html").flipper__link Блог
-      .flipper__authorization
-        .flipper__title Авторизуйтесь
-        form(action="#").flipper__form
-          label(for="login").visuallyhidden Введите Логин
-          .flipper__inputs
-            .flipper__icon-cont
-              +icon('login', 'flipper__icon-login')
-            input.flipper__input#login(type="text", name="login", placeholder="Логин")
-          label(for="password").visuallyhidden Введите Пароль
-          .flipper__inputs
-            .flipper__icon-cont
-              +icon('password', 'flipper__icon-login')
-            input.flipper__input#password(type="password", name="password" placeholder='Пароль')
-          label(for="human")
-            input.flipper__checkbox#human(type="checkbox", name="human")
-            .flipper__checkbox-fake
-            span.flipper__checkbox-text Я человек
-          .flipper__radio
-            .flipper__radio-question Вы точно не робот?
-            .flipper__radio-btns
-              label(for="radio_btn")
-                input.flipper__radio-input#radio_btn(type="radio", name="radio_btn")
-                .flipper__radio-fake
-                span Да
-              label
-                input.flipper__radio-input#radio_btn(type="radio", name="radio_btn")
-                .flipper__radio-fake
-                span Не уверен
-        .flipper__buttons
-          button.flipper__button.flipper__link--back-btn(type="button") на главную
-          button.flipper__button(type="submit") отправить
-            
-    footer.copyright-welcome
-      small © Егоров Дмитрий | создано с любовью в LoftSchool | 2018
+  .auth
+    .auth__parralax
+      +image('parralaxLayers/Layer_0.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_1.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_2.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_3.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_4.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_5.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_6.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_7.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_8.png', 'parralax', 'auth__layers')
+      +image('parralaxLayers/Layer_9.png', 'parralax', 'auth__layers')
+    section.auth__section
+      button.auth__btn(type='button') Авторизоваться
+      .flipper.auth__flipper
+        .flipper__user-card
+          .flipper__avatar
+            +image('avatar.png', 'Avatar', 'flipper__avatar-img')
+          .flipper__desc
+            .flipper__name Егоров Дмитрий
+            .flipper__info Личный сайт разработчика
+          -
+            var socials = [
+              ['vk', 'http://vk.com/egorovfam'],
+              ['github', 'http://github.com/egorov-by-egorov'],
+              ['in', 'http://in.com']
+            ]
+          ul.socials__list
+            each item in socials
+              li.flipper__socials-item
+                a(href=`${item[1]}` target="blank").socials__link
+                  +icon(item[0], 'flipper__socials-icon')
+          nav.flipper__buttons
+            ul.flipper__list
+              li.flipper__item
+                a(href="works.html").flipper__link Мои работы
+              li.flipper__item
+                a(href="about.html").flipper__link Обо мне
+              li.flipper__item
+                a(href="blog.html").flipper__link Блог
+        .flipper__authorization
+          .flipper__title Авторизуйтесь
+          form(action="#").flipper__form
+            label(for="login").visuallyhidden Введите Логин
+            .flipper__inputs
+              .flipper__icon-cont
+                +icon('login', 'flipper__icon-login')
+              input.flipper__input#login(type="text", name="login", placeholder="Логин")
+            label(for="password").visuallyhidden Введите Пароль
+            .flipper__inputs
+              .flipper__icon-cont
+                +icon('password', 'flipper__icon-login')
+              input.flipper__input#password(type="password", name="password" placeholder='Пароль')
+            label(for="human")
+              input.flipper__checkbox#human(type="checkbox", name="human")
+              .flipper__checkbox-fake
+              span.flipper__checkbox-text Я человек
+            .flipper__radio
+              .flipper__radio-question Вы точно не робот?
+              .flipper__radio-btns
+                label
+                  input.flipper__radio-input(type="radio", name="radio_btn")
+                  .flipper__radio-fake
+                  span Да
+                label
+                  input.flipper__radio-input(type="radio", name="radio_btn")
+                  .flipper__radio-fake
+                  span Не уверен
+          .flipper__buttons
+            button.flipper__button.flipper__link--back-btn(type="button") На главную
+            button.flipper__button(type="submit") Войти
+              
+      footer.copyright-welcome
+        small © Егоров Дмитрий | создано с любовью в LoftSchool | 2018

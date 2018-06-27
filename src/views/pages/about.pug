@@ -5,8 +5,11 @@ block variables
 block scripts
   script(src='./about.bundle.js')
 block hero-bg__color
-  .left__color-side
-  .right__color-side 
+  .hero
+    .hero__parralax
+      .left__color-side
+      .right__color-side 
+      +image('welcome_bg.jpg', 'parralax', 'hero__parralax-img')
 block hero-section
   include ../common/hero-section.pug
   +hero-section('Егоров Дмитрий', 'Личный сайт разработчика', 'portfolio_header')
