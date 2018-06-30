@@ -1,34 +1,20 @@
 .left__color-side {
   display: inline-block;
-  height: 135%;
+  height: 100vh;
   width: 50%;
   background-color: #efeee9;
-  @include desktop {
-    height: 150%;
-  }
-  @include tablets {
-    height: 135%;
-  }
-  @include phones-small {
-    height: 150%;
-  }
+  position: absolute;
 }
 
 .right__color-side {
   display: inline-block;
-  height: 135%;
+  height: 100vh;
   width: 50%;
   left: 50%;
   background-color: #eeebdf;
+  position: absolute;
   @include tablets {
     background-color: #efeee9;
-    height: 135%;
-  }
-  @include desktop {
-    height: 150%;
-  }
-  @include phones-small {
-    height: 150%;
   }
 }
 

@@ -1,20 +1,23 @@
 var parralax = (function() {
-  var bg = document.querySelector(".hero__parralax");
-  var user = document.querySelector(".hero__user");
-  var sectionText = document.querySelector(".hero__title-pic");
+  const bg = document.querySelector(".hero__parralax");
+  const user = document.querySelector(".hero__user");
+  const sectionText = document.querySelector(".hero__title-pic");
   return {
     move: function(block, windowScroll, strafeAmount) {
       var strafe = windowScroll / -strafeAmount + "%";
+      var transformString = "translate3d(0," + strafe + ", 0)";
       var style = block.style;
-      style.top = strafe;
+      style.transform = transformString;
+      style.webkitTransform = transformString;
     },
     init: function(wScroll) {
-      this.move(bg, wScroll, 25);
+      this.move(bg, wScroll, 45);
+      this.move(user, wScroll, 35);
+      this.move(sectionText, wScroll, 8);
     }
   };
-}());
+})();
 window.onscroll = function() {
   var wScroll = window.pageYOffset;
   parralax.init(wScroll);
-  // console.log(wScroll);
 };

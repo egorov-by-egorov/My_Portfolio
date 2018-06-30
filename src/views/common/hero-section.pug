@@ -6,6 +6,9 @@ mixin hero-section(name, desc, iconBg, modName)
       ['in', 'http://in.com']
     ]
   section.hero__section
+    .hero__parralax
+      .hero__parralax-layer
+        +image('welcome_bg.jpg', 'parralax', 'hero__parralax-img')
     include ./header
     .hero__title
       +icon((`${iconBg}`), 'hero__title-pic')
