@@ -2,25 +2,28 @@
   {
     "skillsGroup": "Frontend",
     "skills": {
-      "html5": 30,
-      "css3": 50,
-      "JavaScript & jQuery": 30
+      "html5": 90,
+      "css3": 90,
+      "JavaScript & jQuery": 70
     }
   },
   {
     "skillsGroup": "Backend",
     "skills": {
-      "Php": 30,
-      "mySql": 60,
-      "Node.js & npm": 30,
-      "Mongo.db": 70
+      "Php": 20,
+      "mySql": 40,
+      "Node.js & npm": 50,
+      "Mongo.db": 40
     }
   },
   {
     "skillsGroup": "WorkFlow",
     "skills": {
-      "Git": 30,
-      "Gulp": 60,
+      "Git": 90,
+      "Gulp": 80,
+      "Web-pack": 60,
+      "Pug": 80,
+      "Sass": 80,
       "Yarn": 60
     }
   }

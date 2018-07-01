@@ -219,8 +219,8 @@
 
 .skills {
   display: flex;
+  flex-wrap: wrap;
   @include phones-big {
-    flex-wrap: wrap;
     justify-content: center;
   }
 }
@@ -228,10 +228,8 @@
 .skills-list__item {
   display: flex;
   @include tablets {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
@@ -242,7 +240,6 @@
 }
 
 .skill-row__list {
-  display: -webkit-box;
   position: relative;
 }
 
@@ -252,11 +249,11 @@
 }
 
 .skill {
-  display: block;
   position: relative;
   width: 123px;
   height: 123px;
   margin: 18px;
+  font-size: 13px;
   @include tablets {
     width: 130px;
     height: 130px;
@@ -270,7 +267,6 @@
   @include phones {
     width: 109px;
     height: 109px;
-    font-size: 14px;
   }
 }
 
@@ -286,13 +282,14 @@
 .skill__circle {
   fill: transparent;
   stroke: #ccc;
-  stroke-width: 15px;
+  stroke-width: 19px;
 }
 
 .skill__circle_above {
+  transition: 1s;
   stroke: $green;
-  stroke-dasharray: 251;
-  stroke-dashoffset: 40;
+  stroke-dasharray: 257;
+  stroke-dashoffset: 257;
 }
 
 .skill__title {
