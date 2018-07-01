@@ -10,8 +10,11 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
-  z-index: 1;
   @include tablets {
+    background-image: url('assets/images/img/bg/mountains.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
     justify-content: space-between;
     padding: 30px 0;
   }
@@ -31,6 +34,9 @@
   max-height: 1270px;
   max-width: 160%;
   overflow: hidden;
+  @include tablets {
+    display: none;
+  }
 }
 
 .auth__parralax-layer {
@@ -49,7 +55,12 @@
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-
+  @include hd {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 127%;
+  }
 }
 
 .auth__btn {
