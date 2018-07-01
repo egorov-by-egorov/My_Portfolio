@@ -17,7 +17,7 @@ const skill = {
       window.addEventListener("scroll", function() {
         const positionTop = circle.getBoundingClientRect().top;
         const _top = positionTop.toFixed();
-        if (_top > 350 && _top < 550) {
+        if (_top > 350 && _top < 600) {
           circle.style.strokeDashoffset = percents;
         }
       });

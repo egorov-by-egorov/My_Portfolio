@@ -62,7 +62,7 @@
   align-items: center;
   position: relative;
   font-family: 'BernierRegular', sans-serif;
-  height: 200px;
+  height: 180px;
   width: 100%;
   line-height: 1;
   color: #373e42;
@@ -108,7 +108,7 @@
   width: 100%;
   height: 100%;
   background-image: url('assets/images/img/bg/works_bg_form.jpg');
-  background-position: center;
+  background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
   &::after {
@@ -126,7 +126,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
   @include phones-big {
     flex-direction: column;
   }
@@ -136,7 +135,6 @@
   width: 40%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
   @include hd {
     width: 35%;
   }
@@ -149,7 +147,6 @@
 }
 
 .review {
-  margin-bottom: 30px;
   padding: 25px;
   @include phones-big {
     padding: 10px;
@@ -160,6 +157,7 @@
 
 .review__text {
   min-height: 150px;
+  margin-bottom: 30px;
   &::before {
     display: block;
     content: url('assets/images/img/-.png');
@@ -175,7 +173,6 @@
 }
 
 .review__author {
-  margin-top: 30px;
   display: flex;
   @include phones-big {
     margin-top: 10px;
@@ -214,9 +211,30 @@
   font-weight: 600;
 }
 
+.about-me__form-blur {
+  position: relative;
+  width: 380px;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 70px;
+}
+
 .about-me__form {
-  background-color: rgba(55, 62, 66, .1);
-  box-shadow: -5px -10px 20px 10px rgba(55, 62, 66, .60);
+  background-image: url('assets/images/img/bg/works_bg_form.jpg');
+  background-position: -913px -747px;
+  background-position: -490px 675px;
+  background-size: 1360px;
+  filter: blur(15px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.form__wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   padding: 10px 20px 0 20px;
   width: 380px;
   max-width: 380px;
@@ -227,7 +245,6 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 5px;
-  margin-bottom: 50px;
   @include phones {
     width: 300px;
     max-width: 300px;
@@ -328,7 +345,7 @@
   width: 100%;
   height: 50px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .about-me__arrow-img {

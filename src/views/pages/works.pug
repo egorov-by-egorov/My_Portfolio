@@ -34,18 +34,20 @@ block content
           .review__author-info
             .review__author-name Сабанцев Владимир
             .review__author-position преподаватель
-    .about-me__form
-      .form__title связаться со мной
-      form.form(action="#")
-        label(for="name").visuallyhidden Введите имя
-        input#name(type="text", name="name", placeholder="Введите имя").form__input
-        label(for="email").visuallyhidden Введите email
-        input#email(type="email", name="email", placeholder="Введите email").form__input
-        label(for="textarea").visuallyhidden Введите сообщение
-        textarea#textarea(name="textarea", cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
-      .form__buttons
-        button.form__button(type="submit") Отправить
-        button.form__button(type="reset") Очистить
+    .about-me__form-blur
+      .about-me__form
+      .form__wrapper
+        .form__title связаться со мной
+        form.form(action="#")
+          label(for="name").visuallyhidden Введите имя
+          input#name(type="text", name="name", placeholder="Введите имя").form__input
+          label(for="email").visuallyhidden Введите email
+          input#email(type="email", name="email", placeholder="Введите email").form__input
+          label(for="textarea").visuallyhidden Введите сообщение
+          textarea#textarea(name="textarea", cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
+        .form__buttons
+          button.form__button(type="submit") Отправить
+          button.form__button(type="reset") Очистить
     a(href="#").about-me__arrow
       +icon('portf_arrow_up', "about-me__arrow-img")
 
