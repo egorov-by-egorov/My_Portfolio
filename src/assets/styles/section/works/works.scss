@@ -62,7 +62,7 @@
   align-items: center;
   position: relative;
   font-family: 'BernierRegular', sans-serif;
-  height: 180px;
+  height: 200px;
   width: 100%;
   line-height: 1;
   color: #373e42;
@@ -108,9 +108,7 @@
   width: 100%;
   height: 100%;
   background-image: url('assets/images/img/bg/works_bg_form.jpg');
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: auto;
   &::after {
     display: block;
     content: '';
@@ -135,6 +133,7 @@
   width: 40%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 70px;
   @include hd {
     width: 35%;
   }
@@ -222,10 +221,7 @@
 
 .about-me__form {
   background-image: url('assets/images/img/bg/works_bg_form.jpg');
-  background-position: -913px -747px;
-  background-position: -490px 675px;
-  background-size: 1360px;
-  filter: blur(15px);
+  filter: blur(10px);
   position: absolute;
   height: 100%;
   width: 100%;
