@@ -1,6 +1,7 @@
 const sidebar = document.querySelector(".sidebar-mobile");
 const btn = document.querySelector(".sidebar-mobile__btn");
 const heroSec = document.querySelector(".blog");
+const links = document.querySelectorAll(".sidebar-mobile__link");
 
 window.addEventListener("scroll", function() {
   const posTop = heroSec.getBoundingClientRect().top;
@@ -15,4 +16,11 @@ window.addEventListener("scroll", function() {
 btn.addEventListener("click", function() {
   btn.classList.toggle("sidebar-mobile__btn--active");
   sidebar.classList.toggle("sidebar-mobile--active");
+});
+
+links.forEach(link => {
+  link.addEventListener("click", function() {
+    btn.classList.remove("sidebar-mobile__btn--active");
+    sidebar.classList.remove("sidebar-mobile--active");
+  });
 });
