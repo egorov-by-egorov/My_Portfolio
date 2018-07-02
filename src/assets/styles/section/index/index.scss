@@ -79,9 +79,10 @@
     background-color: #fff;
     color: #00bfa5;
   }
-  @include phones-small {
+  @include phones-big {
     align-self: center;
     margin: 0;
+    margin-top: 10px;
   }
 }
 
@@ -96,7 +97,7 @@
     width: 350px;
     max-width: 350px;
   }
-  @include phones-small {
+  @include phones-big {
     width: 300px;
     height: 370px;
   }
