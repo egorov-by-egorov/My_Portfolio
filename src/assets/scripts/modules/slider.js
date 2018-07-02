@@ -8,7 +8,7 @@ const info = {
   },
   methods: {
     callback(eventName) {
-      console.log(eventName);
+      // console.log(eventName);
     },
     enterHandler(el, done) {
       const sentence = el.innerText.trim();
