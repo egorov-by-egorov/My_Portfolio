@@ -10,6 +10,9 @@
   flex-flow: wrap;
   align-items: flex-start;
   justify-content: center;
+  @include tablets {
+    min-height: 400px;
+  }
   @include phones-small {
     min-height: 400px;
   }

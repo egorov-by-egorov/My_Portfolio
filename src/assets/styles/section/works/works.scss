@@ -127,6 +127,9 @@
   @include phones-big {
     flex-direction: column;
   }
+  @include phones-small {
+    margin-bottom: 60px;
+  }
 }
 
 .about__review {
@@ -235,8 +238,6 @@
 
 .form__wrapper {
   position: absolute;
-  height: 100%;
-  width: 100%;
   padding: 10px 20px 0 20px;
   width: 380px;
   max-width: 380px;
@@ -257,6 +258,9 @@
 
 .form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form__title {
@@ -311,12 +315,12 @@
 }
 
 .form__buttons {
-  width: 380px;
+  min-width: 380px;
   max-width: 380px;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   @include phones {
-    width: 300px;
+    min-width: 300px;
     max-width: 300px;
   }
 }

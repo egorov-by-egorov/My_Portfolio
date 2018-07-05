@@ -367,3 +367,49 @@ $hamburger-types: (spring) !default;
     }
   }
 }
+
+input:required:valid {
+  border-color: green;
+  color: green;
+}
+
+.invalid {
+  border-color: red;
+  color: red;
+}
+
+.error-message {
+  animation-name: error;
+  animation-duration: 1s;
+  width: 320px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: lightgoldenrodyellow;
+  padding: 5px;
+  text-align: center;
+  white-space: pre-wrap;
+  color: crimson;
+  font-weight: 600;
+  display: none;
+  &--active {
+    display: block;
+  }
+}
+
+@keyframes error {
+  0% {
+    transform: translate(-5px);
+  }
+  25% {
+    transform: translate(5px);
+  }
+  50% {
+    transform: translate(-5px);
+  }
+  75% {
+    transform: translate(5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

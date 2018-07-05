@@ -1,1 +1,1 @@
-import "./modules/mobile-sidebar.js";
+import "./modules/blogScroll";

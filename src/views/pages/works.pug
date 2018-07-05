@@ -34,20 +34,22 @@ block content
           .review__author-info
             .review__author-name Сабанцев Владимир
             .review__author-position преподаватель
-    .about-me__form-blur
+    .about-me__form-blur#form
       .about-me__form
       .form__wrapper
         .form__title связаться со мной
         form.form(action="#")
           label(for="name").visuallyhidden Введите имя
-          input#name(type="text", name="name", placeholder="Введите имя").form__input
+          input.form__input(type="text", required, v-model='parameters.name', @invalid='addErrorClass', @focus='deleteErrorClass', placeholder="Введите имя")
+          .error-message(ref="error") Неверно введено имя!
           label(for="email").visuallyhidden Введите email
-          input#email(type="email", name="email", placeholder="Введите email").form__input
+          input.form__input(type="email", required, v-model='parameters.email', @invalid='addErrorClass', @focus='deleteErrorClass', placeholder="Введите email")
+          .error-message(ref="error") Неверно введен email!
           label(for="textarea").visuallyhidden Введите сообщение
-          textarea#textarea(name="textarea", cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
-        .form__buttons
-          button.form__button(type="submit") Отправить
-          button.form__button(type="reset") Очистить
+          textarea.form__textarea(type="text", v-model='parameters.text', cols="10", rows="8", placeholder="Ваше сообщение")
+          .form__buttons
+            button.form__button(type="submit") Отправить
+            button.form__button(type="reset") Очистить
     a(href="#").about-me__arrow
       +icon('portf_arrow_up', "about-me__arrow-img")
 
