@@ -8,7 +8,9 @@ mixin hero-section(name, desc, iconBg, modName)
   section.hero__section
     .hero__parralax
       .hero__parralax-layer
-        +image('welcome_bg.jpg', 'parralax', 'hero__parralax-img')
+        +image('parralax__scroll/bg.jpg', 'parralax', 'hero__parralax-img')
+      .hero__parralax-layer
+        +image('parralax__scroll/layer_8.png', 'parralax', 'hero__parralax-img')
     include ./header
     .hero__title
       +icon((`${iconBg}`), 'hero__title-pic')

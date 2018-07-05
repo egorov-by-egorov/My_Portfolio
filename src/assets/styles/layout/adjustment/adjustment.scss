@@ -81,7 +81,7 @@
   height: 100%;
   max-width: 180%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
   clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -167,6 +167,7 @@
 .hero__nav {
   position: absolute;
   display: flex;
+  z-index: 0;
   align-items: center;
   justify-content: center;
   right: 0;
