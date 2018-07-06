@@ -10,7 +10,7 @@ block hero-section
   include ../common/hero-section.pug
   +hero-section('Блог', 'Статьи, которые я написал', 'blog_header', 'hero__name--blog', 'arrow-off')
 block content
-  section.blog
+  section.blog#firstSect
     button(type='button').sidebar-mobile__btn
     aside.sidebar.blog__sidebar
       nav.sidebar__nav
