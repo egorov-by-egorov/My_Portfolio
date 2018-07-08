@@ -25,7 +25,7 @@ block content
       +image('parralaxLayers/Layer_8.png', 'ParralaxLayers', 'auth__parralax-img')
     .auth__parralax-layer(data-speed='0.50')
       +image('parralaxLayers/Layer_6.png', 'ParralaxLayers', 'auth__parralax-img')
-  section.auth__section
+  section.auth__section#auth-component
     button.auth__btn(type='button') Авторизоваться
     .flipper.auth__flipper
       .flipper__user-card
@@ -55,7 +55,7 @@ block content
               a(href="blog.html").flipper__link Блог
       .flipper__authorization
         .flipper__title Авторизуйтесь
-        form(action="#").flipper__form
+        form(action="#").flipper__form#auth-component
           label(for="login").visuallyhidden Введите Логин
           .flipper__inputs
             .flipper__icon-cont
