@@ -1,5 +1,71 @@
-// Parralax
+// Preloader
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgb(125, 218, 204);
+  &__spinner {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  &__animation {
+    width: 150px;
+    height: 150px;
+    will-change: transform;
+    animation: spin 2s linear infinite;
+    &,
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      border: 5px solid transparent;
+      border-top: 5px solid #fff;
+      border-radius: 50%;
+    }
+    &::before {
+      $pos: 7px;
+      top: $pos;
+      left: $pos;
+      right: $pos;
+      bottom: $pos;
+      animation: spin 4s linear infinite;
+    }
+    &::after {
+      $pos: 19px;
+      top: $pos;
+      left: $pos;
+      right: $pos;
+      bottom: $pos;
+      animation: spin 3s linear infinite;
+    }
+  }
+}
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Parralax
 .hero__parralax {
   position: absolute;
   top: 0;
@@ -15,7 +81,7 @@
   height: 100%;
   max-width: 180%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
   clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -101,6 +167,7 @@
 .hero__nav {
   position: absolute;
   display: flex;
+  z-index: 0;
   align-items: center;
   justify-content: center;
   right: 0;
@@ -299,5 +366,51 @@ $hamburger-types: (spring) !default;
         }
       }
     }
+  }
+}
+
+input:required:valid {
+  border-color: green;
+  color: green;
+}
+
+.invalid {
+  border-color: red;
+  color: red;
+}
+
+.error-message {
+  animation-name: error;
+  animation-duration: 1s;
+  width: 320px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: lightgoldenrodyellow;
+  padding: 5px;
+  text-align: center;
+  white-space: pre-wrap;
+  color: crimson;
+  font-weight: 600;
+  display: none;
+  &--active {
+    display: block;
+  }
+}
+
+@keyframes error {
+  0% {
+    transform: translate(-5px);
+  }
+  25% {
+    transform: translate(5px);
+  }
+  50% {
+    transform: translate(-5px);
+  }
+  75% {
+    transform: translate(5px);
+  }
+  100% {
+    transform: translate(0);
   }
 }

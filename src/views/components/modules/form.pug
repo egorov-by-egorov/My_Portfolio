@@ -1,0 +1,15 @@
+.about-me__form-blur#form
+  .about-me__form
+  .form__wrapper
+    .form__title связаться со мной
+    form.form
+      label(for="name").visuallyhidden Введите имя
+      input#name(type="text", required, v-model='parameters.name', @focus='deleteErrorClass', placeholder="Введите имя").form__input
+      label(for="email").visuallyhidden Введите email
+      input#email(type="email", required, v-model='parameters.email', @focus='deleteErrorClass', placeholder="Введите email").form__input
+      label(for="textarea").visuallyhidden Введите сообщение
+      textarea#textarea(v-model='parameters.text', cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
+    .form__buttons
+      button.form__button(type="submit") Отправить
+      button.form__button(type="reset") Очистить
+

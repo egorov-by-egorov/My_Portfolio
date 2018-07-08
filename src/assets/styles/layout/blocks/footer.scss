@@ -9,14 +9,13 @@
   font-weight: 300;
   @include tablets {
     height: 210px;
-    margin-top: -210px;
+    margin-top: -207px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
-
   @include phones-big {
     font-size: 13px;
   }

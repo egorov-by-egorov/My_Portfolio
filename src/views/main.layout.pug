@@ -14,9 +14,16 @@ html(lang="ru-RU")
     meta(name="keywords" content="Разработка и создание сайтов")
     // favicon
     link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+    // Liblary
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    // Styles
     link(rel="stylesheet", href="main.min.css")
   body
     .wrapper
+      .preloader#preloader
+        .preloader__spinner
+          .preloader__animation
+          .preloader__percent#preloader__percent 0%
       block hero-bg__color
       block hero-section
       block content
