@@ -2,73 +2,52 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'My Works'
-  script(src='about.bundle.js')
-block maincontent
-  .maincontent
-    block hero_bg-color
-      .side__color-beige
-    block hero_section
-      include ../common/hero-section.pug
-      +hero-section('hero_works', 'Егоров Дмитрий', 'Личный сайт разработчика', 'portfolio_header')
-    block content
-      .works__title
-        +icon('works_header', 'works_header-title')
-        h2.works__title-text мои работы
-      section.works
-        .works__description-side
-          .works__description-side__container
-            h3.works__description-side__title 
-              p сайт школы онлайн образования
-            .works__description-side__technology html, css, javascript
-            button.works__description-side__button Посмотреть сайт
-              +icon('link', 'works__description-side__button__icon')
-        .works__slider-side
-          .slider
-            .slider__middle-window
-              .slider__middle-window__img
-                +image('middle_img.png', 'image', 'slider_windows_general-img')
-
-            .slider__first-window.slider_windows_general
-              +icon('portf_arrow_down', 'slider__first-window__img-arrow')
-              .slider__first-window__img
-                +image('first_img.jpg', 'image', 'slider_windows_general-img')
-
-            .slider__thirth-window.slider_windows_general
-              +icon('portf_arrow_up', 'slider__first-window__img-arrow')
-              .slider__thirth-window__img
-                +image('thirth_img.jpg', 'image', 'slider_windows_general-img')
-      .works__review-title
-        +icon('about_header', 'works_header-title')
-        .works__subtitle-text что обо мне говорят
-      section.review
-        .review-teachers
-          ul.review-teachers__list
-            li.review-teachers__item
-              .review-teachers__item-breadcrumbs “
-              .review-teachers__item-comment Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-              .review-teachers__item-teachers
-                .review-teachers__item-teachers__img-kov
-                .review-teachers__item-teachers__description
-                  .review-teachers__item-teachers__name Ковальчук Дмитрий
-                  .review-teachers__item-teachers__desc основатель Loftschool
-            li.review-teachers__item
-              .review-teachers__item-breadcrumbs “
-              .review-teachers__item-comment Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-              .review-teachers__item-teachers
-                .review-teachers__item-teachers__img-sab
-                .review-teachers__item-teachers__description
-                  .review-teachers__item-teachers__name Сабанцев Владимир
-                  .review-teachers__item-teachers__desc преподаватель
-        form.form
-          .form__title
-            .form__title-text связаться со мной
-          .form__inputs
-            input(type="text", name="name", placeholder="Имя").form__input
-            input(type="email", name="email", placeholder="Email").form__input
-          textarea(name="textarea", cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
-          .form__buttons
-            button(type="submit").form__button Отправить
-            button(type="reset").form__button Очистить
-        a(href="#").review__arrow
-          +icon('portf_arrow_up', "review__arrow__img")
+block scripts
+  script(src='./works.bundle.js')
+block hero-bg__color
+  .side__color--beige
+block hero-section
+  include ../common/hero-section.pug
+  +hero-section('Егоров Дмитрий', 'Личный сайт разработчика', 'portfolio_header')
+block content
+  section.works
+    .works__header
+      +icon('works_header', 'works__header--bg')
+      h1.works__title мои работы
+    #slider-component
+  section.about-me
+    .about-me__title
+      +icon('about_header', 'works__header--bg')
+      h2.about-me__subtitle что обо мне говорят
+    .about-me__reviews
+      .review.about__review
+        blockquote.review__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        .review__author
+          .review__author-img.review__author-img--pic-kov
+          .review__author-info
+            .review__author-name Ковальчук Дмитрий
+            .review__author-position основатель Loftschool
+      .review.about__review
+        blockquote.review__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .review__author
+          .review__author-img.review__author-img--pic-sab
+          .review__author-info
+            .review__author-name Сабанцев Владимир
+            .review__author-position преподаватель
+    .about-me__form-blur
+      .about-me__form
+      .form__wrapper
+        .form__title связаться со мной
+        form.form(action="#")
+          label(for="name").visuallyhidden Введите имя
+          input#name(type="text", name="name", placeholder="Введите имя").form__input
+          label(for="email").visuallyhidden Введите email
+          input#email(type="email", name="email", placeholder="Введите email").form__input
+          label(for="textarea").visuallyhidden Введите сообщение
+          textarea#textarea(name="textarea", cols="10", rows="8", placeholder="Ваше сообщение").form__textarea
+        .form__buttons
+          button.form__button(type="submit") Отправить
+          button.form__button(type="reset") Очистить
+    a(href="#").about-me__arrow
+      +icon('portf_arrow_up', "about-me__arrow-img")
 

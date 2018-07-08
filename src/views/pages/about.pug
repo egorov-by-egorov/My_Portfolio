@@ -2,58 +2,54 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'About me'
-  script(src='about.bundle.js')
-block hero_bg-color
-  .left__color__side
-  .right__color__side
-block content
+block scripts
+  script(src='./about.bundle.js')
+block hero-bg__color
+  .left__color-side
+  .right__color-side 
+block hero-section
   include ../common/hero-section.pug
-  +hero-section('hero', 'Егоров Дмитрий', 'Личный сайт разработчика', 'portfolio_header')
+  +hero-section('Егоров Дмитрий', 'Личный сайт разработчика', 'portfolio_header')
+block content
   section.about
-    .about__left-side
-      +icon('about_header', 'about_header-title')
-      .about__left-side__title Обо мне
-      .about__left-side__description
-        .about__left-side__description__avatar
-          img.about__left-side__description__avatar-img(src="./assets/images/img/avatar/avatar1.png", alt="Avatar")
-        .about__left-side__description__subtitle Кто я
-        .about__left-side__description__text
-          p Я веб разработчик из Москвы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
-    .about__right-side
-      .about__right-side__title Чем я могу быть вам полезен
-      .about__right-side__description__text
-        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-      .about__right-side__content
-        -
-          var skills = [
-            ['Frontend', [['HTML5', 90], ['CSS3', 65], ['javascript', 70]]],
-            ['Backend', [['PHP', 30], ['mySQL', 40], ['Node.js', 50]]],
-            ['Workflow', [['Git', 90], ['Gulp', 85], ['Webpack', 80]]]
-          ]
-        ul.skill-list
-          each skillsrow in skills
-            li.skill-list__item.skills-row
-              .skills-row__title #{skillsrow[0]}
-              ul.skill-row__list
-                each skill in skillsrow[1]
-                  li.skill-row__item
-                    figure.skill
-                      svg(viewbox='0 0 100 100' preserveAspectRatio='none').skill__figure
-                        circle(cx='50' cy='50' r='40').skill__circle.skill__circle_inder
-                        circle(cx='50' cy='50' r='40').skill__circle.skill__circle_above
-                    .skill__title #{skill[0]}
+    .description.about__description
+      .description__container
+        +icon('about_header', 'about_header-title')
+        h1.description__title Обо мне
+        .description__info
+          .description__avatar
+            img.description__avatar-img(src="./assets/images/img/avatar/avatar1.png", alt="Avatar")
+          h2.description__subtitle Кто я
+          .description__text
+            p Меня зовут Егоров Дмитрий, Я Front-end разработчик. Занимаюсь разработкой современных сайтов и приложений. Мне 27 лет и я из Москвы. Так же являюсь предпринимателем (семейный бизнес)... Нашёл себя в веб программировании и безумно рад и счастлив работать и развиваться в этом направлении. Мне нравится делать интересные и современные проекты и этот сайт я сделал в рамках показа своих работ и возможностей. На данный момент, считаю что добился очень хороших результатов, в этой профессии. Чем именно мне нравится веб?! Тем, что я могу постоянно развиваться в этом направлении и по сути нет предела и тупика, так как профессия очень динамичная и остановится в ней это означает начать деградировать. Так что это полностью соответствует моему стилю жизни. Я человек разносторонний и очень любознательный, люблю читать, придумывать и создавать что-то новое. Люблю качество, поэтому требователен к себе и к другим. Занимаюсь единоборствами, Уважаю честность, здравый эгоизм, независимость и интеллект. На данный момент являюсь одним из организаторов нового проекта онлайн школы <a class="link-aboutme" href="https://loftschool.com/">LoftSchool</a> в Москве <q>LoftMeetUps</q>. Целью данного проекта, вынести сообщество программистов LoftSchool в оффлайн и организовать клуб, целью которого будет:
+            blockquote
+              ul.description__text-list
+                li Обмен опытом между участниками клуба.
+                li Сформировать базу специалистов в каждом регионе.
+                li Привлечь новых участников в Лофт-сообщество.
+                li Обучение юных специалистов.
+                li Ну и конечно самое главное - это знакомство с единомышленниками и коллегами.
+            p На этом сайте я так же веду свой личный <a class="link-aboutme" href="./blog.html">блог</a> в котором делюсь своими знаниями и впечатлениями о новых тенденциях и методах из мира веб-разработки. Желаю приятно провести время на сайте а также ознокомиться с <a class="link-aboutme" href="./works.html">моими другими проектами</a>. По вопросам разработки и заказа сайта, воспользуйтесь контактами ниже или используйте форму на странице <a class="link-aboutme" href="./works.html">мои работы</a>. По вопросам сотрудничества пишите на электронный адрес.
+    .experience.about__experience
+      .experience__container
+        h2.experience__title Чем я могу быть вам полезен
+        .experience__text
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        .experience__content
+          #skills-container
   section.map
     .contacts
       h2.contacts__title Контакты
-      ul.contact__list
-        - 
-          var contacts = [
-            ['skype', 'egorovbyegorov', 'skype:egorovbyegorov'],
-            ['phone', '+7(916)793-94-43', 'tel:+79167939443'],
-            ['envelope', 'egorov-web-studio@mail.ru', 'mailto:egorov-by-egorov@mail.ru'],
-            ['map_marker', 'Москва, Зоологическая улица 26', 'https://www.google.ru/maps/place/%D0%97%D0%BE%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D0%BB.,+26,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+123056/@55.7655839,37.5819408,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54a3093758425:0x683679f2b1750745!8m2!3d55.7655839!4d37.5841295'],
-          ]
-        each item in contacts
-          li.contacts__item
-            +icon(item[0], 'contacts__icon-pic')
-            a.contacts__link(href=item[2]) #{item[1]}
+      address
+        ul.contact__list
+          -
+            var contacts = [
+              ['skype', 'egorovbyegorov', 'skype:egorovbyegorov'],
+              ['phone', '+7(916)793-94-43', 'tel:+79167939443'],
+              ['envelope', 'egorov-web-studio@mail.ru', 'mailto:egorov-by-egorov@mail.ru'],
+              ['map_marker', 'Москва, Зоологическая улица 26', 'https://www.google.ru/maps/place/%D0%97%D0%BE%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D0%BB.,+26,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+123056/@55.7655839,37.5819408,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54a3093758425:0x683679f2b1750745!8m2!3d55.7655839!4d37.5841295'],
+            ]
+          each item in contacts
+            li.contacts__item
+              +icon(item[0], 'contacts__icon-pic')
+              a.contacts__link(href=item[2]) #{item[1]}

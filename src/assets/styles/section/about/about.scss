@@ -1,31 +1,67 @@
-.left__color__side {
-  position: absolute;
-  height: 610px;
+.left__color-side {
+  display: inline-block;
+  height: 100vh;
   width: 50%;
   background-color: #efeee9;
+  position: absolute;
 }
 
-.right__color__side {
-  position: absolute;
-  height: 610px;
+.right__color-side {
+  display: inline-block;
+  height: 100vh;
   width: 50%;
   left: 50%;
-  background-color: beige;
+  background-color: #eeebdf;
+  position: absolute;
+  @include tablets {
+    background-color: #efeee9;
+  }
 }
 
 .about {
   width: 100%;
   display: flex;
-  &__left-side {
-    background-color: #efeee9;
+  &__description {
     width: 50%;
-    text-align: center;
     position: relative;
+    @include tablets {
+      width: 100%;
+    }
   }
-  &__right-side {
+  &__experience {
     width: 50%;
-    background-color: beige;
     padding: 15px;
+    @include tablets {
+      width: 100%;
+    }
+  }
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.description {
+  background-color: #efeee9;
+  text-align: center;
+}
+
+.description__container {
+  width: 440px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  @include hd {
+    min-width: 97%;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include tablets {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @include phones-small {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -35,9 +71,12 @@
   left: 0;
   opacity: 0.08;
   width: 100%;
+  @include hd {
+    width: 50%;
+  }
 }
 
-.about__left-side__title {
+.description__title {
   font-size: 63px;
   font-family: 'BernierRegular', sans-serif;
   &::before {
@@ -46,6 +85,9 @@
     font-size: 63px;
     opacity: .6;
     margin-right: 5px;
+    @include phones-small {
+      font-size: 35px;
+    }
   }
   &::after {
     display: inline-block;
@@ -53,29 +95,41 @@
     font-size: 63px;
     opacity: .6;
     margin-left: 5px;
+    @include phones-small {
+      font-size: 35px;
+    }
+  }
+  @include hd {
+    width: 50%;
+  }
+  @include phones-small {
+    font-size: 35px;
   }
 }
 
-.about__left-side__description {
+.description__info {
   width: 100%;
-  padding: 20px;
+  @include hd {
+    width: 50%;
+  }
 }
 
-.about__left-side__description__avatar {
+.description__avatar {
   height: 391px;
   width: 100%;
 }
 
-.about__left-side__description__avatar-img {
+.description__avatar-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.about__left-side__description__subtitle {
+.description__subtitle {
   text-transform: uppercase;
   font-family: 'BernierRegular', sans-serif;
   font-size: 35px;
+  margin-bottom: 1px;
   &::before {
     display: inline-block;
     content: '-';
@@ -92,11 +146,34 @@
   }
 }
 
-.about__left-side__description__text {
+.description__text {
   text-align: left;
+  @include phones-small {
+    padding: 0 10px;
+  }
 }
 
-.about__right-side__title {
+.description__text-list {
+  list-style: disc;
+  margin-left: 30px;
+}
+
+.experience {
+  background-color: #eeebdf;
+}
+
+.experience__container {
+  @include tablets {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  @include phones-big {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.experience__title {
   display: flex;
   justify-content: center;
   width: 70%;
@@ -118,26 +195,51 @@
     opacity: .6;
     margin-left: 10px;
   }
-}
-
-.about__right-side__description__text {
-  margin: 25px 0;
-}
-
-.skill-list {
-  &__item {
-    display: inline-block;
+  @include phones-big {
+    font-size: 21px;
+    width: 80%;
   }
 }
 
-.skills-row__title {
+.experience__text {
+  margin: 25px 0;
+}
+
+.experience__content {
+  text-align: left;
+  @include phones-big {
+    text-align: center;
+  }
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  @include phones-big {
+    justify-content: center;
+  }
+}
+
+.skills-list__item {
+  display: flex;
+  @include tablets {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.skills-list__title {
   margin-left: 18px;
   font-size: 28px;
   font-weight: 500;
 }
 
 .skill-row__list {
-  display: -webkit-box;
   position: relative;
 }
 
@@ -147,11 +249,25 @@
 }
 
 .skill {
-  display: block;
   position: relative;
-  width: 110px;
-  height: 110px;
+  width: 123px;
+  height: 123px;
   margin: 18px;
+  font-size: 13px;
+  @include tablets {
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  @include phones-big {
+    width: 130px;
+    height: 130px;
+  }
+  @include phones {
+    width: 109px;
+    height: 109px;
+  }
 }
 
 .skill__figure {
@@ -166,18 +282,25 @@
 .skill__circle {
   fill: transparent;
   stroke: #ccc;
-  stroke-width: 15px;
+  stroke-width: 19px;
 }
 
 .skill__circle_above {
+  transition: 1s;
   stroke: $green;
-  stroke-dasharray: 251;
-  stroke-dashoffset: 40;
+  stroke-dasharray: 257;
+  stroke-dashoffset: 257;
 }
 
 .skill__title {
   position: absolute;
-  top: 41%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 77px;
+  color: #00bea4;
+  font-weight: 500;
 }
 
 .socials__item-round {
@@ -187,21 +310,40 @@
 }
 
 .map {
-  height: 670px;
+  height: 100vh;
   background-image: url('./assets/images/img/bg/map-pseudo.jpg');
   background-position: center;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  @include tablets {
+    padding-bottom: 100px;
+  }
+  @include phones-big {
+    padding-bottom: 0;
+    align-items: flex-start;
+  }
 }
 
 .contacts {
-  @include absolute;
   width: 380px;
+  max-width: 380px;
   height: 290px;
+  max-height: 290px;
   border-radius: 7px;
   background-color: #fcfcfce6;
   text-align: center;
   transition: 0.3s;
+  @include phones-big {
+    padding-bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+    max-height: 260px;
+  }
   &__title {
     font-family: 'BernierRegular', sans-serif;
     font-style: normal;
@@ -233,6 +375,7 @@
   }
   &__icon-pic {
     width: 19px;
+    height: 19px;
     margin: 0 15px;
     fill: #00bea4;
   }
@@ -242,4 +385,17 @@
       font-style: normal;
     }
   }
+}
+
+.link-aboutme {
+  font-weight: 600;
+  text-decoration: underline;
+  transition: .3s;
+  &:hover {
+    color: #00bea4;
+  }
+}
+
+q {
+  font-style: italic;
 }
