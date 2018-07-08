@@ -1,7 +1,7 @@
 .hero__section {
   width: 100%;
   height: 100vh;
-  min-height: 650px;
+  min-height: 450px;
   position: relative;
   top: 0;
   left: 0;
@@ -89,6 +89,7 @@
   opacity: 0.6;
   transition: opacity 0.2s;
   fill: #fff;
+  transition-duration: 1s;
   &:hover {
     opacity: 1;
   }

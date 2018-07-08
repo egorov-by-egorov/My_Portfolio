@@ -122,8 +122,11 @@
 .description__avatar-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border: 3px inset #efeee9;
+  box-shadow: -6px 6px 5px 0px rgba(199, 193, 193, 0.858);
 }
+
 
 .description__subtitle {
   text-transform: uppercase;
