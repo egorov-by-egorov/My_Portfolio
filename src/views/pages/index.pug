@@ -55,34 +55,6 @@ block content
               a(href="blog.html").flipper__link Блог
       .flipper__authorization
         .flipper__title Авторизуйтесь
-        form(action="#").flipper__form#auth-component
-          label(for="login").visuallyhidden Введите Логин
-          .flipper__inputs
-            .flipper__icon-cont
-              +icon('login', 'flipper__icon-login')
-            input.flipper__input#login(type="text", name="login", placeholder="Логин")
-          label(for="password").visuallyhidden Введите Пароль
-          .flipper__inputs
-            .flipper__icon-cont
-              +icon('password', 'flipper__icon-login')
-            input.flipper__input#password(type="password", name="password" placeholder='Пароль')
-          label(for="human")
-            input.flipper__checkbox#human(type="checkbox", name="human")
-            .flipper__checkbox-fake
-            span.flipper__checkbox-text Я человек
-          .flipper__radio
-            .flipper__radio-question Вы точно не робот?
-            .flipper__radio-btns
-              label
-                input.flipper__radio-input(type="radio", name="radio_btn")
-                .flipper__radio-fake
-                span Да
-              label
-                input.flipper__radio-input(type="radio", name="radio_btn")
-                .flipper__radio-fake
-                span Не уверен
-        .flipper__buttons
-          button.flipper__button.flipper__link--back-btn(type="button") На главную
-          button.flipper__button(type="submit") Войти
+        #auth-component
     footer.copyright-welcome
       small © Егоров Дмитрий | создано с любовью в LoftSchool | 2018
