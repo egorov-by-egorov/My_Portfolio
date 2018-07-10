@@ -6,20 +6,24 @@ new Vue({
   data() {
     return {
       user: {
-        name: "",
-        password: ""
+        name: "adminEgorov",
+        password: "Oc022728",
+        human: ""
       }
     };
   },
   methods: {
     login() {
-      axios.post("https://localhost:3000/login", this.user).then(response => {
-        if (response.status === 200) {
-          const ttl = Math.floor(Date.now() / 1000 + response.data.ttl);
-          localStorage.setItem("token", response.data.token);
-          localStorage.setItem("ttl", ttl);
-        }
-      });
+      axios
+        .post("http://webdev-api.loftschool.com/login", this.user)
+        .then(response => {
+          if (response.status === 200) {
+            const ttl = Math.floor(Date.now() / 1000 + response.data.ttl);
+            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("ttl", ttl);
+            window.location.href = "/admin";
+          }
+        });
     },
     addErrorClass(e) {
       e.preventDefault();
