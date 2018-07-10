@@ -2,9 +2,7 @@
   #tabs
     ul.tabs
       li.item(v-for="tab in tabs")
-        router-link(
-          :to="tab.href"
-        ).link {{tab.title}}
+        a(href="").link {{tab.title}}
 </template>
 
 <script>

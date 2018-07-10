@@ -1,48 +1,40 @@
 <template lang="pug">
   .skills
     .skills-title {{type.name}}
-    table.skills-list
-      skill-item(
+    table
+      skills-item(
         v-for="skill in skills"
         v-if="skill.category === type.id"
         :key="skill.id"
         :skill="skill"
       )
-      skill-item(
+      skills-item(
         :editmode="true"
         :typeId="type.id"
       )
-    HR
-
+    br
+    hr
+    br
 </template>
 
 <script>
-import skillItem from "./skillItem";
+import skillsItem from "./skillsItem";
 
 export default {
   components: {
-    skillItem
+    skillsItem
   },
   props: {
-    type: {
-      type: Object,
-      default: () => {}
-    },
     skills: {
       type: Array,
       default: () => []
-    }
-  },
-  mehtods: {
-    fromNameToNum(name) {
-      switch (name) {
-        case "frontend":
-          return 0;
-        case "backend":
-          return 1;
-        case "workflow":
-          return 2;
-      }
+    },
+    type: {
+      type: Object,
+      default: () => ({
+        id: 0,
+        name: "Frontend"
+      })
     }
   }
 };
