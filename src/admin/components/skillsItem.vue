@@ -1,25 +1,18 @@
 <template lang="pug">
-  tr(v-if="editmode === false")
-    td {{skill.title}}
-    td
-      span {{skill.percent}} %
-    td
-     button() Delete
-
-  tr(v-else)
-    td
-      input(
-        type="text"
-        v-model="newSkill.title"
-        )
-    td
-      input(
-        type="text"
-        v-model="newSkill.percents"
-        )
-      span %
-    td
-      button(@click="addSkill") Add
+    tr(v-if="editmode === false")
+        td {{skill.title}}
+        td 
+            span {{skill.percents}} %
+        td
+            button() удалить
+    tr(v-else)
+        td
+            input(type="text" v-model="newSkill.title")
+        td 
+            input(type="text" v-model="newSkill.percents")
+            span %
+        td
+            button(@click="addSkill") Добавить
 </template>
 
 <script>
@@ -30,13 +23,13 @@ export default {
       type: Boolean,
       default: false
     },
-    skill: {
-      type: Object,
-      default: () => {}
-    },
     typeId: {
       type: Number,
       default: 0
+    },
+    skill: {
+      type: Object,
+      default: () => {}
     }
   },
   data() {
@@ -51,7 +44,10 @@ export default {
   methods: {
     ...mapActions(["addNewSkill"]),
     addSkill() {
-      this.addNewSkill(this.newSkill);
+      this.addNewSkill(this.newSkill).then(r => {
+        this.newSkill.title = "";
+        this.newSkill.percents = "";
+      });
     }
   }
 };

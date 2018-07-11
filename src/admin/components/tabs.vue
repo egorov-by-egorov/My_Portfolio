@@ -2,7 +2,9 @@
   #tabs
     ul.tabs
       li.item(v-for="tab in tabs")
-        a(href="").link {{tab.title}}
+        router-link(
+          :to="tab.href"
+        ).link {{tab.title}}
 </template>
 
 <script>
@@ -24,11 +26,9 @@ export default {
 #tabs {
   background: #f0efe9;
 }
-
 .item {
   border-right: 2px solid #fff;
 }
-
 .link {
   display: block;
   width: 180px;
@@ -39,7 +39,6 @@ export default {
   height: 100%;
   display: flex;
 }
-
 .tabs {
   display: flex;
 }

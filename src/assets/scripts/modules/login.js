@@ -21,7 +21,7 @@ new Vue({
             const ttl = Math.floor(Date.now() / 1000 + response.data.ttl);
             localStorage.setItem("token", response.data.token);
             localStorage.setItem("ttl", ttl);
-            // window.location.href = "/admin";
+            window.location.href = "/admin";
           }
         });
     },
