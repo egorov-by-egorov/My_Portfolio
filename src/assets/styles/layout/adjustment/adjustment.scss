@@ -305,7 +305,7 @@ $hamburger-types: (spring) !default;
   &,
   &::before,
   &::after {
-    width: 30px;
+    width: 40px;
     height: 4px;
     background-color: $hamburger-layer-color;
     border-radius: $hamburger-layer-border-radius;
@@ -320,10 +320,10 @@ $hamburger-types: (spring) !default;
     display: block;
   }
   &::before {
-    top: 0px;
+    top: 0;
   }
   &::after {
-    bottom: 0px;
+    bottom: 0;
   }
 }
 
@@ -346,12 +346,12 @@ $hamburger-types: (spring) !default;
         transition-delay: 0.22s;
         background-color: transparent;
         &::before {
-          top: 0;
+          top: -10px;
           transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
           transform: translate3d(0, 10px, 0) rotate(45deg);
         }
         &::after {
-          top: 0;
+          top: -10px;
           transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
           transform: translate3d(0, 10px, 0) rotate(-45deg);
         }
