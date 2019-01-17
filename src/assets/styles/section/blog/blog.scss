@@ -1,0 +1,252 @@
+.hero__name--blog {
+  font-family: 'BernierRegular', sans-serif;
+  font-size: 63px;
+  font-weight: 400;
+  &::before {
+    display: inline-block;
+    content: '-';
+    font-size: 63px;
+    opacity: .6;
+    margin-right: 15px;
+    @include phones-small {
+      font-size: 35px;
+    }
+  }
+  &::after {
+    display: inline-block;
+    content: '-';
+    font-size: 63px;
+    opacity: .6;
+    margin-left: 15px;
+    @include phones-small {
+      font-size: 35px;
+    }
+  }
+  @include phones-small {
+    font-size: 35px;
+  }
+}
+
+.blog {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  &__sidebar {
+    width: 30%;
+    @include tablets {
+      background-color: rgba(0, 191, 165, .95);
+      height: 100vh;
+      width: 0px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+      overflow: hidden;
+      transition: .4s ease-in-out;
+      &--active {
+        width: 40%;
+        @include phones-big {
+          width: 70%;
+        }
+        @include phones-small {
+          width: 82%;
+        }
+      }
+    }
+  }
+  &__articles {
+    width: 60%;
+    @include tablets {
+      width: 100%;
+    }
+    @include phones-big {
+      width: 100%;
+    }
+  }
+  @include tablets {
+    margin: 0 auto;
+    padding: 30px 15px;
+  }
+}
+
+
+.sidebar-mobile__btn {
+  width: 0px;
+  height: 70px;
+  background-color: rgba(0, 191, 165, .9);
+  border-radius: 50%;
+  top: 50%;
+  left: -55px;
+  display: none;
+  transform: translateY(-50%);
+  position: fixed;
+  transition: .4s ease-in-out;
+  @include tablets {
+    display: block;
+  }
+}
+
+.sidebar-mobile__btn--active {
+  left: 33%;
+  @include phones-big {
+    left: 59%;
+  }
+  @include phones-small {
+    left: 70%;
+  }
+}
+
+.sidebar {
+  padding-top: 10px;
+}
+
+.sidebar__list {
+  text-align: right;
+  &--active {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    transform: translateY(-5%);
+    max-width: 30%;
+  }
+  @include tablets {
+    position: relative;
+    left: 0;
+    top: 50%;
+    text-align: left;
+    transform: translateY(-50%);
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  @include phones {
+    width: 250px;
+  }
+}
+
+.sidebar__item {
+  padding: 15px;
+  transition: 0.3s;
+  margin-bottom: 15px;
+  @include tablets {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-bottom: 15px;
+    &--active {
+      color: #fff;
+      border-right: 3px solid #fff;
+    }
+  }
+  @include phones {
+    padding: 12px;
+    margin-bottom: 5px;
+  }
+  @include phones-small {
+    padding: 8px;
+  }
+}
+
+.sidebar__item--active {
+  color: #00bfa5;
+  border-right: 3px solid #00bfa5;
+  @include tablets {
+    border-right: 3px solid #fff;
+  }
+}
+
+.sidebar__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  &:hover {
+    color: #00bfa5;
+  }
+  @include tablets {
+    color: #fff;
+    opacity: 0.8;
+  }
+}
+
+.articles {
+  padding-bottom: 187px;
+  @include tablets {
+    width: 100%;
+  }
+}
+
+.articles__item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.509);
+  width: 90%;
+  &:last-child {
+    border: none;
+  }
+  @include tablets {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+}
+
+.articles__title {
+  font-family: 'BernierRegular';
+  font-size: 35px;
+  @include phones-small {
+    font-size: 21px;
+  }
+}
+
+.articles__date {
+  color: #00bfa5;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.articles__text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.desc-blog {
+  top: 64%;
+}
+
+.table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  font-family: monospace;
+  margin-bottom: 20px;
+  &-row {
+    background-color: #f5f2f0;
+  }
+}
+
+.table-1cell-width {
+  width: 15px;
+  height: 23px;
+  background-color: #e7e5e3;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.table-2cell-width {
+  width: 200px;
+}
+
+b {
+  color: black;
+  font-weight: 600;
+}
+
+i {
+  color: #84ac32;
+  font-style: normal;
+}

@@ -1,0 +1,21 @@
+header.hero__header
+  .socials.hero__socials
+    ul.socials__list
+      each item in socials
+        li.socials__item
+          a(href=item[1] target="blank").socials__link
+            +icon(item[0], "socials__link-icon")
+  button.hamburger.hamburger--spring(type='button')
+    span.hamburger-box
+      span.hamburger-inner
+  nav.hero__nav
+    ul.hero__list
+      li.hero__item
+        a.hero__link(href="works.html") мои работы
+      li.hero__item
+        a.hero__link(href="blog.html") блог
+      li.hero__item
+        a.hero__link(href="about.html") обо мне
+      li.hero__item
+        a.hero__link(href="index.html") авторизация
+

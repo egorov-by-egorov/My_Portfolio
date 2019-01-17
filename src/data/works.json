@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Burger Shop",
+    "skills": "Html, Css, JavaScript, Jquery",
+    "photo": "assets/images/img/bg/burgerShop.png",
+    "link": "https://egorov-by-egorov.github.io/burgers-shop/app/"
+  },
+  {
+    "id": 2,
+    "title": "TrustCrow",
+    "skills": "Html, Css, JavaScript",
+    "photo": "assets/images/img/bg/trustCrow.png",
+    "link": "https://egorov-by-egorov.github.io/trustcrowsite/dist/"
+  },
+  {
+    "id": 3,
+    "title": "Good Cardboard",
+    "skills": "Html, Css, JavaScript, Jquery, Animate, Yandex map",
+    "photo": "assets/images/img/bg/goodCardboard.png",
+    "link": "https://egorov-by-egorov.github.io/good_cardboard/dist/"
+  },
+  {
+    "id": 4,
+    "title": "Retro",
+    "skills": "Html, Css, JavaScript",
+    "photo": "assets/images/img/bg/retro.png",
+    "link": "https://egorov-by-egorov.github.io/Retro/dist/"
+  },
+  {
+    "id": 5,
+    "title": "Coworking",
+    "skills": "Html, Css, Animate",
+    "photo": "assets/images/img/bg/coworking.png",
+    "link": "https://egorov-by-egorov.github.io/coworking/"
+  },
+  {
+    "id": 6,
+    "title": "Bakery Shop",
+    "skills": "Html, Css, JavaScript",
+    "photo": "assets/images/img/bg/bakeryShop.png",
+    "link": "https://egorov-by-egorov.github.io/bakery_shop/dist/"
+  },
+  {
+    "id": 7,
+    "title": "Zecurion",
+    "skills": "Html, Css, JavaScript, Jquery",
+    "photo": "assets/images/img/bg/zecurion.png",
+    "link": "https://egorov-by-egorov.github.io/Zecurion/dist/"
+  }
+]

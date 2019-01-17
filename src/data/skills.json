@@ -1,0 +1,40 @@
+[
+  {
+    "skillsGroup": "Frontend",
+    "skills": {
+      "Html": 90,
+      "Css": 90,
+      "JavaScript": 70,
+      "jQuery": 70,
+      "Vue.js": 50,
+      "React": 30
+    }
+  },
+  {
+    "skillsGroup": "Backend",
+    "skills": {
+      "Php": 40,
+      "mySql": 30,
+      "Node.js": 50,
+      "Mongo.db": 30
+    }
+  },
+  {
+    "skillsGroup": "WorkFlow",
+    "skills": {
+      "Git": 90,
+      "Gulp": 90,
+      "Webpack": 90,
+      "Pug": 80,
+      "Sass": 90,
+      "Yarn": 80,
+      "npm": 90,
+      "Babel": 90,
+      "ESlint": 80,
+      "Svg": 90,
+      "Adobe Photoshop": 85,
+      "Sketch": 70,
+      "Bem": 90
+    }
+  }
+]

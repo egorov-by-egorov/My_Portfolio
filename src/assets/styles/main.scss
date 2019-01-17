@@ -1,4 +1,11 @@
+// general
 @import 'normalize.css';
-@import './layout/fonts.scss';
-@import './layout/base.scss';
-@import './blocks/*.scss';
+@import './config/mixins/mixins.scss';
+@import './layout/general/general.scss';
+// adjustment
+@import './layout/fonts/fonts.scss';
+@import './layout/adjustment/adjustment.scss';
+// blocks
+@import './layout/blocks/*scss';
+// sections
+@import './section/**/*.scss';

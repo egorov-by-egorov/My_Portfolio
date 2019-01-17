@@ -1,0 +1,368 @@
+.side__color--beige {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #faf8f0;
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+}
+
+.works__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #faf8f0;
+  height: 190px;
+  width: 100%;
+  color: #373e42;
+  text-align: center;
+  &::before {
+    display: inline-block;
+    content: '-';
+    font-size: 63px;
+    opacity: .6;
+  }
+  &::after {
+    display: inline-block;
+    content: '-';
+    font-size: 63px;
+    opacity: .6;
+  }
+}
+
+.works__header--bg {
+  @include absolute;
+  opacity: 0.08;
+  width: 50%;
+  @include phones-big {
+    width: 80%;
+  }
+}
+
+.works__title {
+  font-family: 'BernierRegular', sans-serif;
+  font-size: 63px;
+  margin: 0 20px;
+  @include phones-big {
+    font-size: 35px;
+  }
+}
+
+// section --about-me--
+.about-me__title {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'BernierRegular', sans-serif;
+  height: 200px;
+  width: 100%;
+  line-height: 1;
+  color: #373e42;
+  text-align: center;
+  &::before {
+    display: inline-block;
+    content: '-';
+    font-size: 63px;
+    opacity: .6;
+    height: 100%;
+    line-height: 2;
+  }
+  &::after {
+    display: inline-block;
+    content: '-';
+    font-size: 63px;
+    opacity: .6;
+    height: 100%;
+    line-height: 2;
+  }
+  @include phones-big {
+    height: 120px;
+  }
+}
+
+.about-me__subtitle {
+  overflow: hidden;
+  width: 35%;
+  font-size: 63px;
+  margin: 0 20px;
+  height: auto;
+  @include phones-big {
+    font-size: 35px;
+    width: 50%;
+  }
+}
+
+.about-me {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/images/img/bg/works_bg_form.jpg');
+  background-size: auto;
+  &::after {
+    display: block;
+    content: '';
+    height: 125px;
+    width: 100%;
+    @include tablets {
+      height: 210px;
+    }
+  }
+}
+
+.about-me__reviews {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @include phones-big {
+    flex-direction: column;
+  }
+  @include phones-small {
+    margin-bottom: 60px;
+  }
+}
+
+.about__review {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+  @include hd {
+    width: 35%;
+  }
+  @include tablets {
+    width: 70%;
+  }
+  @include phones-big {
+    width: 100%;
+  }
+}
+
+.review {
+  padding: 25px;
+  @include phones-big {
+    padding: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+
+.review__text {
+  min-height: 150px;
+  margin-bottom: 30px;
+  &::before {
+    display: block;
+    content: url('assets/images/img/-.png');
+    height: 34px;
+    width: 34px;
+    @include phones-big {
+      margin: 0 auto;
+    }
+  }
+  @include phones-big {
+    min-height: auto;
+  }
+}
+
+.review__author {
+  display: flex;
+  @include phones-big {
+    margin-top: 10px;
+  }
+}
+
+.review__author-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+}
+
+.review__author-img--pic-kov {
+  background-image: url('assets/images/img/avatar/ava_kov.jpg');
+}
+
+.review__author-img--pic-sab {
+  background-image: url('assets/images/img/avatar/ava_saba.jpg');
+}
+
+.review__author-info {
+  color: #00bea4;
+  padding: 20px 20px 0 20px;
+  @include phones-big {
+    padding: 0 20px;
+    line-height: 2;
+  }
+}
+
+.review__author-name {
+  font-weight: 600;
+}
+
+.about-me__form-blur {
+  position: relative;
+  width: 380px;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 70px;
+  @include phones {
+    width: 300px;
+    max-width: 300px;
+    height: 395px;
+    max-height: 395px;
+  }
+}
+
+.about-me__form {
+  background-image: url('assets/images/img/bg/works_bg_form.jpg');
+  filter: blur(10px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.form__wrapper {
+  position: absolute;
+  padding: 10px 20px 0 20px;
+  width: 380px;
+  max-width: 380px;
+  height: 390px;
+  max-height: 390px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  @include phones {
+    width: 300px;
+    max-width: 300px;
+    height: 395px;
+    max-height: 395px;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__title {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: 'BernierRegular', sans-serif;
+  font-size: 35px;
+  width: 100%;
+  margin-bottom: 10px;
+  &::before {
+    display: block;
+    content: '-';
+    font-size: 35px;
+    opacity: .6;
+    margin-right: 10px;
+  }
+  &::after {
+    display: block;
+    content: '-';
+    font-size: 35px;
+    opacity: .6;
+    margin-left: 10px;
+  }
+  @include phones {
+    font-size: 21px;
+  }
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  outline: none;
+  border: 1px solid transparent;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__textarea {
+  outline: none;
+  width: 100%;
+  resize: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  vertical-align: text-top;
+  margin-bottom: 10px;
+}
+
+.form__buttons {
+  min-width: 380px;
+  max-width: 380px;
+  min-height: 50px;
+  display: flex;
+  @include phones {
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+.form__button {
+  height: 50px;
+  width: 50%;
+  background: #027263c9;
+  border-right: 2px solid #fff;
+  color: #fff;
+  transition: 0.3s;
+  font-weight: 600;
+  font-size: 14px;
+  &:last-child {
+    border-right: none;
+    border-radius: 0 0 5px 0;
+  }
+  &:first-child {
+    border-radius: 0 0 0 5px;
+  }
+  &:hover {
+    background: #00bea4;
+  }
+}
+
+.about-me__arrow {
+  display: block;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-me__arrow-img {
+  fill: #fff;
+  width: 28px;
+  height: 38px;
+  opacity: 0.6;
+  transition: 0.2s;
+  &:hover {
+    opacity: 1;
+    width: 28px;
+    height: 30px;
+  }
+}

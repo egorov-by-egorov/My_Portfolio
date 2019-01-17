@@ -8,6 +8,7 @@ module.exports = {
     auth: "./src/assets/scripts/auth.js",
     works: "./src/assets/scripts/works.js",
     blog: "./src/assets/scripts/blog.js",
+    general: "./src/assets/scripts/general.js",
     vendor: ["vue"]
   },
   output: {
@@ -30,10 +31,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new UglifyJsPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ["vendor", "bootloader"]
-    })
+    new UglifyJsPlugin()
+    // ,
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: ["vendor", "bootloader"]
+    // })
   ],
   resolve: {
     alias: {
