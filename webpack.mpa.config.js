@@ -31,10 +31,11 @@ module.exports = {
     ]
   },
   plugins: [
-    new UglifyJsPlugin(),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ["vendor", "bootloader"]
-    })
+    new UglifyJsPlugin()
+    // ,
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: ["vendor", "bootloader"]
+    // })
   ],
   resolve: {
     alias: {

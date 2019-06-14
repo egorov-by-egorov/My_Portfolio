@@ -10,8 +10,16 @@
   flex-flow: wrap;
   align-items: flex-start;
   justify-content: center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
   @include tablets {
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 92%, 50% 100%, 0 92%);
     min-height: 400px;
+  }
+  @include phones-big {
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 95%, 50% 100%, 0 95%);
   }
   @include phones-small {
     min-height: 400px;
@@ -80,7 +88,7 @@
 
 .hero__down-arrow {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
 }

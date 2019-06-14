@@ -9,10 +9,12 @@ btn.addEventListener("click", e => {
   e.preventDefault();
   frontSide.style.transform = "rotateY(180deg)";
   backSide.style.transform = "rotateY(360deg)";
+  btn.style.opacity = "0";
 });
 
 goMain.addEventListener("click", e => {
   e.preventDefault();
   frontSide.style.transform = "rotateY(0deg)";
   backSide.style.transform = "rotateY(180deg)";
+  btn.style.opacity = "1";
 });
